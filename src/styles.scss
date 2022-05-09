@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+   font-family: 'Poppins', sans-serif;
+   --yellow: #FFC43D;
+   --blue: #1B9AAA;
+   --black: #020200; 
+   scroll-behavior: smooth;
+   a{
+      text-decoration: none;
+      color: inherit;
+   }
+}
+*{
+   font-family: inherit;
+   box-sizing: border-box;
+}
+i{
+   font-family: 'Font Awesome 6 Free';
+}
+body{
+   width: 100vw;
+   margin: 0;
+   overflow-x: hidden;
+   .header{
+      font-size: 4rem;
+      position: relative;
+      width: fit-content;
+      z-index: 0;
+      &::before{
+         content: '';
+         background: var(--yellow);
+         height: 25%;
+         width: 60%;
+         position: absolute;
+         bottom: 15%;
+         left: -2%;
+         z-index: -1;
+      }
+      &.h_3000{
+         &::after{
+            content: ' 3000';
+         }
+      }
+   }
+   .header_2{
+      font-size: 3rem;
+      margin: auto;
+      position: relative;
+      width: fit-content;
+      z-index: 0;
+      &::before{
+         content: '';
+         background: var(--yellow);
+         height: 25%;
+         width: 50%;
+         position: absolute;
+         bottom: 15%;
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: -1;
+      }
+   }
+   .content{
+      section{
+         &:not(.hero){
+            width: calc(100vw - 40px);
+            max-width: 1480px;
+            padding-top: 50px;
+         }
+         margin: auto;
+      }
+   }
+}

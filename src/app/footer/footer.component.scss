@@ -1,0 +1,12 @@
+footer{
+   width: 100%;
+   &.homePage{
+      margin-top: 0;
+   }
+   background: var(--black);
+   color: white;
+   text-align: center;
+   padding: 30px 20px;
+   margin-top: 50px;
+   line-height: 2.5rem;
+}

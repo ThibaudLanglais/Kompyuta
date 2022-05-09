@@ -1,0 +1,49 @@
+<nav class="{{ whiteClass ? 'white' : '' }}">
+  <div class="logo">
+    <a [routerLink]="['/']">
+      <img
+        src="../../assets/logo_{{ whiteClass ? 'white' : 'black' }}.svg"
+        alt="Logo du site Kompyuta"
+      />
+      <p>コンピュータ</p>
+    </a>
+  </div>
+  <ul class="mainmenu">
+    <li><a href="/">Configurateur</a></li>
+    <li>
+      <a href="/"
+        >Catalogue<img src="../../assets/chevron.svg" alt="Chevron"
+      /></a>
+      <ul class="submenu">
+        <li>
+          <a href="/">
+            <h3 class="header">Ordinateurs fixes</h3>
+            <img src="../../assets/ordi_fixes.png" alt="Ordinateurs fixes"
+          /></a>
+        </li>
+        <div>
+          <li>
+            <a href="/">
+              <h3 class="header">Composants</h3>
+              <img src="../../assets/composants.png" alt="Composants"
+            /></a>
+          </li>
+          <li>
+            <a href="/">
+              <h3 class="header">PC Portables</h3>
+              <img
+                src="../../assets/ordi_portables.png"
+                alt="Ordinateurs portables"
+            /></a>
+          </li>
+        </div>
+      </ul>
+    </li>
+    <li><a href="/">Comparateur</a></li>
+  </ul>
+  <div class="buttons">
+    <img src="../../assets/search.svg" alt="" />
+    <img src="../../assets/basket.svg" alt="" />
+    <img src="../../assets/account.svg" alt="" />
+  </div>
+</nav>
