@@ -11,6 +11,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
 import { TextIconButtonComponent } from './text-icon-button/text-icon-button.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { PageTestComponent } from './page-test/page-test.component';
+import { ConfigurateurComponent } from './configurateur/configurateur.component';
+import { ComparateurComponent } from './comparateur/comparateur.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     ProductPageComponent,
     MentionsLegalesComponent,
     TextIconButtonComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    PageTestComponent,
+    ConfigurateurComponent,
+    ComparateurComponent
   ],
   imports: [
     BrowserModule,

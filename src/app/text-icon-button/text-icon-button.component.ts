@@ -10,6 +10,7 @@ export class TextIconButtonComponent implements OnInit {
   @Input() text?: string;
   @Input() image?: string;
   @Input() color?: string;
+  @Input() bg?: string;
 
   constructor() { }
 

@@ -20,9 +20,13 @@ i {
   font-family: "Font Awesome 6 Free";
 }
 body {
+  min-height: 100vh;
   width: 100vw;
   margin: 0;
   overflow-x: hidden;
+  app-root{
+    height: 100%;
+  }
   .bold_title{
     font-weight: bold;
     font-size: 2.5rem;
@@ -44,11 +48,6 @@ body {
       left: -2%;
       z-index: -1;
     }
-    &.h_3000 {
-      &::after {
-        content: " 3000";
-      }
-    }
   }
   .header_2 {
     font-size: 3rem;
@@ -66,6 +65,13 @@ body {
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
+    }
+  }
+  h1, h2{
+    &.h_3000 {
+      &::after {
+        content: " 3000";
+      }
     }
   }
   .content {

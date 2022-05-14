@@ -1,0 +1,54 @@
+<div class="content">
+  <app-breadcrumb></app-breadcrumb>
+  <section>
+    <h1 class="header_2 h_3000">Le test</h1>
+    <p class="subtitle">Le PC de vos rêves en quelques clics</p>
+    <div class="quiz">
+      <div class="progress-bar">
+        <span
+          style="width: {{ progression }}%"
+          class="progress-indicator"
+        ></span>
+        <span
+          style="left: calc({{ progression }}% - 24px);"
+          class="progress-number"
+          >{{ progression }}%</span
+        >
+      </div>
+      <div class="question">
+        <h2>{{ currentQuestion.title }}</h2>
+        <div class="answers">
+          <div
+            *ngFor="
+              let answer of currentQuestion.answers;
+              let indexOfelement = index
+            "
+            class="answer"
+          >
+            <input
+              (click)="onAnswerChange(indexOfelement)"
+              type="radio"
+              name="quiz"
+              id="{{ indexOfelement }}"
+              value="{{ indexOfelement }}"
+            />
+            <label for="{{ indexOfelement }}">{{ answer.ans }}</label>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <app-text-icon-button
+          (click)="prevQuestion()"
+          bg="white"
+          text="Question Précédente"
+        ></app-text-icon-button>
+        <app-text-icon-button
+          (click)="nextQuestion()"
+          color="white"
+          bg="var(--blue)"
+          text="Question suivante"
+        ></app-text-icon-button>
+      </div>
+    </div>
+  </section>
+</div>

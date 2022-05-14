@@ -12,7 +12,7 @@
         Nos experts ont conçu un test sur mesure afin de vous permettre de
         trouver un ordinateur à votre image.
       </p>
-      <a href="#custom">Essayer dès maintenant</a>
+      <a [routerLink]="['test']">Essayer dès maintenant</a>
     </div>
   </section>
   <section class="nouveautes">
@@ -35,8 +35,8 @@
     <h1 class="header_2 h_3000">Sur-mesure</h1>
     <p>Trouvez le PC de vos rêves</p>
     <div class="buttons">
-      <a class="quiz" href="/quiz">quiz</a>
-      <a class="scratch" href="/configurateur">à partir de rien</a>
+      <a class="quiz" [routerLink]="['test']">quiz</a>
+      <a class="scratch" [routerLink]="['configurateur']">à partir de rien</a>
     </div>
   </section>
   <section class="supporters">

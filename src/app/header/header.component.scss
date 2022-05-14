@@ -34,6 +34,7 @@ nav{
       .mainmenu{
          > li{
             .submenu{
+               background: var(--black);
                &::before{
                   position: absolute;
                   top: 0;
@@ -74,13 +75,15 @@ nav{
             }
          }
          .submenu{
+            box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+            list-style: none;
             display: grid;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s linear;
             height: 470px;
             position: fixed;
-            background-color: var(--black);
+            background-color: white;
             width: calc(100% + 40px);
             left: -20px;
             top: 0;
