@@ -1,0 +1,5 @@
+<section class="breadcrumb">
+  <a *ngFor="let fragment of fragments" [routerLink]="[fragment.path]"
+    >{{ fragment.name }} /
+  </a>
+</section>

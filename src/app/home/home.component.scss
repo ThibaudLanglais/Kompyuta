@@ -71,16 +71,22 @@ div{
       }
    }
    .custom{
+      > p{
+         text-align: center;
+         font-size: 1.1rem;
+         margin: 10px 0 50px;
+      }
       .buttons{
          display: flex;
          align-items: center;
          gap: 20px;
-         width: 100%;
+         width: 50%;
+         margin: auto;
          a{
-            padding: 30px 10px;
+            padding: 20px 10px;
             color: white;
-            border-radius: 17px;
-            font-size: 2rem;
+            border-radius: 7px;
+            font-size: 1.5rem;
             flex: 1;
             text-align: center;
             &::first-letter{
@@ -128,18 +134,23 @@ div{
          flex-direction: column;
          gap: 10px;
          align-items: flex-end;
-         input{
+         label{
+            color: white;
+            margin-right: auto;
+         }
+         input, textarea{
+            min-height: 60px;
             box-sizing: border-box;
-            height: 70px;
             border-radius: 7px;
+            width: 350px;
             &[type="email"], &[type="text"]{
-               width: 350px;
                background: white;
                color: var(--black);
                padding: 0 10px;
                border: 0;
             }
             &[type="submit"]{
+               width: fit-content;
                cursor: pointer;
                color: var(--black);
                background: var(--yellow);

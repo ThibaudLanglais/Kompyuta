@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" style="padding-top: 0">
   <section class="hero">
     <img
       class="bg"
@@ -32,7 +32,8 @@
     </div>
   </section>
   <section class="custom" id="custom">
-    <h1 class="header h_3000">Sur-mesure</h1>
+    <h1 class="header_2 h_3000">Sur-mesure</h1>
+    <p>Trouvez le PC de vos rêves</p>
     <div class="buttons">
       <a class="quiz" href="/quiz">quiz</a>
       <a class="scratch" href="/configurateur">à partir de rien</a>
@@ -49,13 +50,10 @@
       <p>Nos experts vous répondront dès le jour même !</p>
     </div>
     <form action="#">
-      <input placeholder="adresse mail" type="email" name="email" id="email" />
-      <input
-        placeholder="votre message"
-        type="text"
-        name="message"
-        id="message"
-      />
+      <label for="email">Adresse mail</label>
+      <input type="email" name="email" id="email" />
+      <label for="message">Votre message</label>
+      <textarea name="message" id="message" cols="30" rows="4"></textarea>
       <input type="submit" value="Envoyer le formulaire" />
     </form>
     <span class="clear"></span>

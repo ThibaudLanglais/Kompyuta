@@ -1,19 +1,18 @@
 <div class="content">
+  <app-breadcrumb></app-breadcrumb>
   <section>
     <div class="product-infos">
       <div class="product-gallery">
         <div class="main">
-          <img src="../../assets/ordi_fixes.png" alt="Image du Produit" />
+          <img src="{{ currentImage }}" alt="Image du Produit" />
         </div>
         <div class="gallery">
-          <div class="el">
-            <img src="../../assets/ordi_fixes.png" alt="Image du Produit" />
-          </div>
-          <div class="el">
-            <img src="../../assets/ordi_fixes.png" alt="Image du Produit" />
-          </div>
-          <div class="el">
-            <img src="../../assets/ordi_fixes.png" alt="Image du Produit" />
+          <div *ngFor="let image of images" class="el">
+            <img
+              (click)="updateMain(image)"
+              src="{{ image }}"
+              alt="Image du Produit"
+            />
           </div>
         </div>
       </div>
@@ -34,9 +33,66 @@
           bla bla bla bla bla
         </p>
         <div class="actions">
-          <button></button>
+          <app-text-icon-button
+            image="<i class='fa-solid fa-pen'></i>"
+          ></app-text-icon-button>
+          <app-text-icon-button text="Comparer"></app-text-icon-button>
+          <app-text-icon-button text="Acheter"></app-text-icon-button>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="les_plus">
+    <h3 class="bold_title">Les + du produit</h3>
+    <ul>
+      <li>Stockage</li>
+      <li>Mémoire vive</li>
+      <li>Processeur</li>
+    </ul>
+  </section>
+  <section class="components">
+    <h3 class="bold_title">Composants</h3>
+    <ul>
+      <li>
+        <img src="../../assets/ram.png" alt="Ram" />
+        <p>Corsair Value Select 16 Go (2x 8 Go) DDR3 1600 MHz CL11</p>
+      </li>
+      <li>
+        <img src="../../assets/ssd.png" alt="Storage" />
+        <p>Seagate BarraCuda 2 To (ST2000DM008)</p>
+      </li>
+      <li>
+        <img src="../../assets/power.png" alt="Power Supply" />
+        <p>Corsair CV450 80PLUS Bronze</p>
+      </li>
+      <li>
+        <img src="../../assets/fan.png" alt="Fans" />
+        <p>be quiet! Pure Rock 2 Black</p>
+      </li>
+      <li>
+        <img src="../../assets/gpu.png" alt="GPU" />
+        <p>MSI GeForce GT 1030 2GHD4 LP OC</p>
+      </li>
+      <li>
+        <img src="../../assets/cpu.png" alt="CPU" />
+        <p>Intel Pentium Gold G6405 (4.1 GHz)</p>
+      </li>
+      <li>
+        <img src="../../assets/motherboard.png" alt="Motherboard" />
+        <p>Gigabyte H410M S2H V3</p>
+      </li>
+    </ul>
+    <app-text-icon-button
+      text="Éditer"
+      image="<i class='fa-solid fa-pen'></i>"
+    ></app-text-icon-button>
+  </section>
+  <section class="articles_similaires">
+    <h3 class="bold_title">Articles similaires</h3>
+    <div class="carousel">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
     </div>
   </section>
 </div>

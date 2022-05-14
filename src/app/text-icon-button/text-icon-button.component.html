@@ -1,0 +1,7 @@
+<button
+  class="{{ !text && image ? 'iconOnly' : '' }}"
+  style="background-color: {{ color ? color : 'var(--yellow)' }};"
+>
+  <p *ngIf="text">{{ text }}</p>
+  <p *ngIf="image" class="image" [innerHTML]="image"></p>
+</button>

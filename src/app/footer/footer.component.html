@@ -1,7 +1,8 @@
 <footer [ngClass]="{ homePage: routerProp.url == '/' }">
   <p>
     <strong>コンピュータ</strong>, site de vente spécialisé en informatique.
-    <br /><u>Mentions légales</u><br />
+    <br /><a [routerLink]="['mentions-legales']"><u>Mentions légales</u></a
+    ><br />
     <br />
     Réalisé par Ady, Maxou et Tibo.<br /><br />
     <strong>コンピュータ, tous droits réservés ©2022</strong>

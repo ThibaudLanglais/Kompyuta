@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+import { TextIconButtonComponent } from './text-icon-button/text-icon-button.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ProductPageComponent } from './product-page/product-page.component';
     HomeComponent,
     CardComponent,
     FooterComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    MentionsLegalesComponent,
+    TextIconButtonComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
