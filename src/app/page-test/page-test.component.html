@@ -35,6 +35,7 @@
             <label for="{{ indexOfelement }}">{{ answer.ans }}</label>
           </div>
         </div>
+        <p *ngIf="currentQuestion.message">{{ currentQuestion.message }}</p>
       </div>
       <div class="actions">
         <app-text-icon-button
@@ -46,7 +47,9 @@
           (click)="nextQuestion()"
           color="white"
           bg="var(--blue)"
-          text="Question suivante"
+          text="{{
+            currentQuestion.message ? 'Terminer le quiz' : 'Question suivante'
+          }}"
         ></app-text-icon-button>
       </div>
     </div>

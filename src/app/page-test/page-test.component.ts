@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-test',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   questions = {
     title: "Pourquoi voulez-vous un PC ?",
@@ -54,6 +55,7 @@ export class PageTestComponent implements OnInit {
   answersHistory: number[] = [];
   questionsRemaining: number = -1;
   progression: number = 1 / this.questionsRemaining;
+  endingScreen = {title: "Quiz terminé !", message: 'Confirmez vos résultats en appuyant ci-dessous.'}
 
   ngOnInit(): void {
     this.updateProgression()
@@ -77,15 +79,18 @@ export class PageTestComponent implements OnInit {
   }
 
   nextQuestion(){
-    if(this.currentAnswer != -1){
+    if(this.currentQuestion.message){
+      this.router.navigate(['/']);
+    }else if(this.currentAnswer != -1){
+      this.answersHistory.push(this.currentAnswer);
       var tmp: any = this.currentQuestion.answers[this.currentAnswer].subquestion;
       if(tmp){
-        this.answersHistory.push(this.currentAnswer);
         this.currentQuestion = tmp 
         this.currentAnswer = -1
         this.updateProgression()
-      }else{
+      }else if(this.progression != 100){
         this.progression = 100
+        this.currentQuestion = this.endingScreen;
       }
     }
   }
@@ -100,7 +105,7 @@ export class PageTestComponent implements OnInit {
   }
 
   updateProgression(){
-      this.questionsRemaining = this.getMaximumRemaining(this.currentQuestion);
-      this.progression = parseInt((100 / (this.questionsRemaining+1))+'')
+    this.questionsRemaining = this.getMaximumRemaining(this.currentQuestion);
+    this.progression = parseInt((100 / (this.questionsRemaining+1))+'')
   }
 }
