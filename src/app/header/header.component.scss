@@ -31,6 +31,21 @@ nav{
             filter: none;
          }
       }
+      .mainmenu{
+         > li{
+            .submenu{
+               &::before{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  height: 68px;
+                  background: var(--black);
+                  content: '';
+               }
+            }
+         }
+      }
    }
 
    .mainmenu{
@@ -73,6 +88,15 @@ nav{
             padding: 70px 20px 20px;
             gap: 25px;
             grid-template-columns: 5fr 3fr;
+            &::before{
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               height: 68px;
+               background: white;
+               content: '';
+            }
             li{
                width: 100%;
                height: 100%;

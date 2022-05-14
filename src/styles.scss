@@ -70,13 +70,17 @@ body {
   }
   .content {
       padding-top: 68px;
+
     section {
       &:not(.hero) {
         width: calc(100vw - 40px);
-        max-width: 1480px;
+        max-width: 1380px;
         padding-top: 50px;
       }
       margin: auto;
+    }
+    .hero ~ section{
+      max-width: 1480px;
     }
   }
 }
