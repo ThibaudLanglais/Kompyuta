@@ -1,4 +1,4 @@
-<nav class="{{ whiteClass ? 'white' : '' }}">
+<nav class="{{ whiteClass ? 'white' : '' }} {{ menuActive ? 'active' : '' }}">
   <div class="logo">
     <a [routerLink]="['/']">
       <img
@@ -46,4 +46,9 @@
     <img src="../../assets/basket.svg" alt="" />
     <img src="../../assets/account.svg" alt="" />
   </div>
+  <button (click)="toggleMenu()" class="mobile-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>

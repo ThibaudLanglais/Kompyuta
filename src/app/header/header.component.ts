@@ -13,6 +13,7 @@ import { HeaderService } from '../services/header/header.service';
 export class HeaderComponent implements OnInit {
   
   whiteClass = false;
+  menuActive = false;
 
   constructor(private service: HeaderService){
     service.headerIsWhite.subscribe(val => this.whiteClass = val);
@@ -20,4 +21,9 @@ export class HeaderComponent implements OnInit {
   
   ngOnInit(): void {
   }
+
+  toggleMenu(){
+    this.menuActive = !this.menuActive;
+  }
+
 }
