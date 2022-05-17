@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataServiceService } from '../services/data/data-service.service';
 
 @Component({
   selector: 'app-product-page',
@@ -13,15 +15,24 @@ export class ProductPageComponent implements OnInit {
     '../../assets/ordi.png',
   ];
   currentImage: String;
-  
-  constructor() { 
+  data: any;
+
+
+  constructor(private route: ActivatedRoute, private dataService: DataServiceService) { 
     this.currentImage = this.images[0];
     this.images = this.images.filter((a)=>a != this.currentImage);
   }
-
+  
   ngOnInit(): void {
+    this.route.params.subscribe((val: any)=>{
+      this.dataService.getPcs().subscribe((pcs: any)=>{
+        this.data = pcs.filter((a: any) => `${a.marque}_${a.nom}` == val.id)
+        console.log(this.data);
+        
+      })
+    })
   }
-
+  
   updateMain(newMain: String){
     var tmp = this.currentImage;
     this.currentImage = newMain;

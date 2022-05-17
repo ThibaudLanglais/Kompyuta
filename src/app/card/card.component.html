@@ -1,5 +1,5 @@
-<a [routerLink]="['/product']" class="card">
-  <img src="../../assets/ordi.png" alt="Image du produit" />
+<a *ngIf="data" [routerLink]="['/product/:asser_respire%20tc10']" class="card">
+  <img src="../../assets/images_ordis/{{ data.images[0] }}" alt="Image du produit" />
   <div class="infos">
     <h3>Ordinateur G@ym3rZ</h3>
     <p>
