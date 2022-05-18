@@ -27,7 +27,7 @@ nav{
          }
       }
       .buttons{
-         & > div{
+         .btn_container{
             img{
                filter: none;
             }
@@ -52,6 +52,11 @@ nav{
       .mobile-toggle{
          span{
             background: white;
+         }
+      }
+      .search{
+         input{
+            border: 0;
          }
       }
    }
@@ -161,8 +166,14 @@ nav{
       z-index: 1;
       display: flex;
       gap: 15px;
-      & > div{
+      .btn_container{
+         cursor: pointer;
+         background: none;
+         border: 0;
          position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
          .badge{
             z-index: 1;
             position: absolute;
@@ -212,6 +223,34 @@ nav{
          &:last-child{
             bottom: 0;
          }
+      }
+   }
+   .search{
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 50%;
+      min-width: 400px;
+      transform: translateX(-50%);
+      pointer-events: none;
+      &.active{
+         pointer-events: all;
+         input{
+            opacity: 1;
+            transform: translateX(0);
+            transition: transform 0.3s cubic-bezier(.79,.05,.02,.96), opacity 0.1s linear 0.2s;
+         }
+      }
+      input{
+         border: 1px solid black;
+         transition: transform 0.5s cubic-bezier(.79,.05,.02,.96), opacity 0.1s linear;
+         padding: 10px;
+         border-radius: 20px;
+         height: 44px;
+         width: 100%;
+         color: black;
+         transform: translateX(100%);
+         opacity: 0;
       }
    }
 }

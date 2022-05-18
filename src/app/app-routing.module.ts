@@ -5,6 +5,8 @@ import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ConfigurateurComponent } from './configurateur/configurateur.component';
 import { HomeComponent } from './home/home.component';
 import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PagePanierComponent } from './page-panier/page-panier.component';
 import { PageTestComponent } from './page-test/page-test.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 
@@ -14,10 +16,12 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductPageComponent},
   { path: 'categorie', redirectTo: ''},
   { path: 'categorie/:slug', component: CategorieComponent},
+  { path: 'panier', component: PagePanierComponent},
   { path: 'comparateur', component: ComparateurComponent},
   { path: 'configurateur', component: ConfigurateurComponent},
   { path: 'test', component: PageTestComponent},
   { path: 'mentions-legales', component: MentionsLegalesComponent},
+  // { path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({

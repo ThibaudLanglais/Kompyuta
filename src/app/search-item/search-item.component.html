@@ -4,9 +4,19 @@
     src="../../assets/images_ordis/{{ item.images[0] }}"
     alt="Image du produit"
   />
-  <p class="item_title">{{ item.marque + " - " + item.nom }}</p>
+  <div class="item_title_container">
+    <p class="item_title">{{ item.marque + " - " + item.nom }}</p>
+    <p *ngIf="item.custom" class="custom">Personnalisé</p>
+  </div>
   <p class="item_price">{{ item.prix }}€</p>
   <div class="actions">
+    <app-text-icon-button
+      (click)="deleteFromPanier(index)"
+      *ngIf="trash && index != undefined"
+      color="white"
+      image='<i class="fa-solid fa-trash"></i>'
+      bg="var(--blue)"
+    ></app-text-icon-button>
     <a [routerLink]="['/product', item.id]">
       <app-text-icon-button
         color="white"

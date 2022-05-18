@@ -42,16 +42,18 @@
     <li><a [routerLink]="['comparateur']">Comparateur</a></li>
   </ul>
   <div class="buttons">
-    <div>
+    <button (click)="toggleSearch()" class="btn_container">
       <img src="../../assets/search.svg" alt="" />
-    </div>
+    </button>
     <div>
       <span *ngIf="panierItemsNumber" class="badge">{{
         panierItemsNumber
       }}</span>
-      <img src="../../assets/basket.svg" alt="" />
+      <a class="btn_container" [routerLink]="['panier']">
+        <img src="../../assets/basket.svg" alt="" />
+      </a>
     </div>
-    <div>
+    <div class="btn_container">
       <img src="../../assets/account.svg" alt="" />
     </div>
   </div>
@@ -60,4 +62,12 @@
     <span></span>
     <span></span>
   </button>
+  <form class="search" [ngClass]="{ active: searchActive }">
+    <input
+      placeholder="Recherchez un produit..."
+      type="text"
+      name="search_bar"
+      id="search_bar"
+    />
+  </form>
 </nav>

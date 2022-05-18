@@ -1,0 +1,19 @@
+<div class="content">
+  <section>
+    <h1 class="header_2 h_3000">Le panier</h1>
+    <p class="subtitle" *ngIf="data.length == 0">Votre panier est vide 😔</p>
+    <div class="items">
+      <app-search-item
+        *ngFor="let item of data; let index = index"
+        trash="true"
+        [item]="item"
+        [index]="index"
+      ></app-search-item>
+    </div>
+    <app-text-icon-button
+      (click)="onClickCommander()"
+      class="commander"
+      text="Commander"
+    ></app-text-icon-button>
+  </section>
+</div>

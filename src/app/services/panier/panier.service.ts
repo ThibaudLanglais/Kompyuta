@@ -31,6 +31,20 @@ export class PanierService {
     this.setPanier()
   }
 
+  deleteFromPanier(element: number){
+    if(this.panierValue.items.length > element){
+      this.panierValue.items.splice(element, 1);
+      this.panierState.next(this.panierValue)
+      this.setPanier()
+    }
+  }
+
+  deletePanier(){
+    this.panierValue.items = [];
+    this.panierState.next(this.panierValue);
+    this.setPanier()
+  }
+
   panierSubscription(): Observable<Panier>{
     return this.panierState.asObservable();
   }

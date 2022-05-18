@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   
   whiteClass = false;
   menuActive = false;
+  searchActive = false;
   panierItemsNumber?: Number;
 
   constructor(private service: HeaderService, private panierService: PanierService){
@@ -28,6 +29,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu(){
     this.menuActive = !this.menuActive;
+  }
+
+  toggleSearch(){
+    this.searchActive = !this.searchActive;
   }
 
 }

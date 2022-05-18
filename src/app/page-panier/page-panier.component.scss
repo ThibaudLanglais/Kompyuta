@@ -1,0 +1,16 @@
+.content{
+   section{
+      max-width: 1150px;
+      .commander{
+         margin-left: auto;
+         display: flex;
+         justify-content: flex-end;
+      }
+      .items{
+         margin: 40px 0;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+      }
+   }
+}

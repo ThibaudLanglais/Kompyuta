@@ -19,6 +19,8 @@ import { CategorieComponent } from './categorie/categorie.component';
 import { NavigationStart } from '@angular/router';
 import { SearchItemComponent } from './search-item/search-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PagePanierComponent } from './page-panier/page-panier.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ConfigurateurComponent,
     ComparateurComponent,
     CategorieComponent,
-    SearchItemComponent
+    SearchItemComponent,
+    PagePanierComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
