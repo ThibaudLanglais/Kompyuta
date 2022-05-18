@@ -14,6 +14,11 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { PageTestComponent } from './page-test/page-test.component';
 import { ConfigurateurComponent } from './configurateur/configurateur.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CategorieComponent } from './categorie/categorie.component';
+import { NavigationStart } from '@angular/router';
+import { SearchItemComponent } from './search-item/search-item.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +33,15 @@ import { ComparateurComponent } from './comparateur/comparateur.component';
     BreadcrumbComponent,
     PageTestComponent,
     ConfigurateurComponent,
-    ComparateurComponent
+    ComparateurComponent,
+    CategorieComponent,
+    SearchItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

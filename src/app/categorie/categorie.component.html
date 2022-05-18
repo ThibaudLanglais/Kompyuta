@@ -1,0 +1,49 @@
+<div class="content">
+  <section>
+    <h1 class="header_2">{{ title }}</h1>
+    <div class="subtitle">{{ subtitle }}</div>
+  </section>
+  <section *ngIf="filteredData.length != 0" class="search_section">
+    <form
+      class="filters"
+      [formGroup]="filtersForm"
+      (ngSubmit)="onFiltersSubmit()"
+    >
+      <p class="filters_title">Critères de sélection</p>
+      <div class="range">
+        <input
+          formControlName="priceControl"
+          type="range"
+          name="price_range"
+          id="price_range"
+          min="{{ priceMin }}"
+          max="{{ priceMax }}"
+          value="{{ priceMin }}"
+        />
+        <label for="price_range">{{ priceMin }}€</label>
+        <label for="price_range">{{ priceMax }}€</label>
+      </div>
+      <app-text-icon-button
+        class="confirmer_selection"
+        text="Confirmer la sélection"
+        type="submit"
+      ></app-text-icon-button>
+    </form>
+    <div class="results">
+      <div class="topbar">
+        <p>Modèle</p>
+        <p>Prix</p>
+        <p>Actions</p>
+      </div>
+      <div class="items">
+        <app-search-item
+          *ngFor="let item of filteredData; let index"
+          [item]="item"
+        ></app-search-item>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="filteredData.length == 0">
+    <p class="no-product">Pas de produits 😥</p>
+  </section>
+</div>

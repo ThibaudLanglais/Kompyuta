@@ -15,4 +15,17 @@ export class DataServiceService {
   getPcs(){
     return this.http.get('../../assets/jsons/pcs.json');
   }
+
+  addImages(array: any[]){
+    var res: any[] = []
+    array.forEach((el:any) => {
+      el.images = []
+      el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}.jpg`)
+      for (let i = 2; i < 4; i++) {
+        el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}_${i}.jpg`)
+      }
+      res.push(el)
+    });
+    return res;
+  }
 }

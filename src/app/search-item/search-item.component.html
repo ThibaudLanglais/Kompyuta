@@ -1,0 +1,23 @@
+<div class="item">
+  <img
+    *ngIf="item.images"
+    src="../../assets/images_ordis/{{ item.images[0] }}"
+    alt="Image du produit"
+  />
+  <p class="item_title">{{ item.marque + " - " + item.nom }}</p>
+  <p class="item_price">{{ item.prix }}€</p>
+  <div class="actions">
+    <a [routerLink]="['/product', item.id]">
+      <app-text-icon-button
+        color="white"
+        image='<i class="fa-solid fa-eye"></i>'
+        bg="var(--blue)"
+      ></app-text-icon-button>
+    </a>
+    <app-text-icon-button
+      color="white"
+      image='<i class="fa-solid fa-pen"></i>'
+      bg="var(--blue)"
+    ></app-text-icon-button>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CategorieComponent } from './categorie/categorie.component';
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { ConfigurateurComponent } from './configurateur/configurateur.component';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +10,10 @@ import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'product', component: ProductPageComponent},
+  { path: 'product', redirectTo: ''},
+  { path: 'product/:id', component: ProductPageComponent},
+  { path: 'categorie', redirectTo: ''},
+  { path: 'categorie/:slug', component: CategorieComponent},
   { path: 'comparateur', component: ComparateurComponent},
   { path: 'configurateur', component: ConfigurateurComponent},
   { path: 'test', component: PageTestComponent},

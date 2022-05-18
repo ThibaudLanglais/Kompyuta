@@ -1,8 +1,14 @@
 [
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 1,
+        "reviews":{
+            "positive": 42,
+            "negative": 2
+        },
         "marque": "ASSER",
         "nom": "Respire TC10",
-        "type": "fixe",
+        "type": "fixes",
         "ecran": null,
         "clavier": null,
         "system": {
@@ -31,9 +37,15 @@
         "prix": 1000
     }, 
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 2,
+        "reviews":{
+            "positive": 62,
+            "negative": 21
+        },
         "marque": "ASSER",
         "nom": "Respire TC2",
-        "type": "fixe",
+        "type": "fixes",
         "ecran": null,
         "clavier": null,
         "system": {
@@ -62,9 +74,15 @@
         "prix": 300
     }, 
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 3,
+        "reviews":{
+            "positive": 658,
+            "negative": 53
+        },
         "marque": "ASSER",
         "nom": "Respire TC",
-        "type": "fixe",
+        "type": "fixes",
         "ecran": null,
         "clavier": null,
         "system": {
@@ -93,9 +111,15 @@
         "prix": 500
     }, 
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 13,
+        "reviews":{
+            "positive": 4,
+            "negative": 1000
+        },
         "marque": "ASSER",
         "nom": "Swif 15",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 15,
             "type": "TN",
@@ -136,9 +160,15 @@
         "prix": 900
     },      
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 4,
+        "reviews":{
+            "positive": 420,
+            "negative": 69
+        },
         "marque": "ASSER",
         "nom": "Swif 13",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 13,
             "type": "IPS",
@@ -179,9 +209,15 @@
         "prix": 900
     },    
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 5,
+        "reviews":{
+            "positive": 123,
+            "negative": 25
+        },
         "marque": "ASSER",
         "nom": "Swif 14",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 14,
             "type": "IPS",
@@ -222,9 +258,15 @@
         "prix": 800
     },      
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 6,
+        "reviews":{
+            "positive": 333,
+            "negative": 53
+        },
         "marque": "ROJ",
         "nom": "Flow Z15",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 15,
             "type": "TN",
@@ -265,9 +307,15 @@
         "prix": 1700
     },      
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 7,
+        "reviews":{
+            "positive": 121,
+            "negative": 22
+        },
         "marque": "ROJ",
         "nom": "Flow Z13",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 13,
             "type": "TN",
@@ -308,9 +356,15 @@
         "prix": 1500
     },
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 8,
+        "reviews":{
+            "positive": 42,
+            "negative": 2
+        },
         "marque": "Azuss",
         "nom": "ZunBook 13",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 13,
             "type": "IPS",
@@ -351,9 +405,15 @@
         "prix": 1200
     },   
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 9,
+        "reviews":{
+            "positive": 42,
+            "negative": 0
+        },
         "marque": "Azuss",
         "nom": "ZunBook 12",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 12,
             "type": "IPS",
@@ -394,9 +454,15 @@
         "prix": 900
     },  
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 10,
+        "reviews":{
+            "positive": 0,
+            "negative": 3
+        },
         "marque": "Azuss",
         "nom": "VivaBook 15",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 15,
             "type": "TN",
@@ -437,9 +503,15 @@
         "prix": 700
     },
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 11,
+        "reviews":{
+            "positive": 531,
+            "negative": 123
+        },
         "marque": "Azuss",
         "nom": "VivaBook 14",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 14,
             "type": "TN",
@@ -480,9 +552,15 @@
         "prix": 700
     },
     {
+        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+        "id": 12,
+        "reviews":{
+            "positive": 53,
+            "negative": 15
+        },
         "marque": "Azuss",
         "nom": "VivaBook 11",
-        "type": "portable",
+        "type": "portables",
         "ecran": {
             "taille": 11,
             "type": "TN",

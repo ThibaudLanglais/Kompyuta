@@ -1,0 +1,26 @@
+.item{
+   padding: 5px 10px;
+   display: flex;
+   border: 1px solid black;
+   align-items: center;
+   gap: 15px;
+   img{
+      height: 50px;
+      width: 50px;
+      object-fit: contain;
+   }
+   p{
+      white-space: nowrap;
+      &.item_title{
+         flex: 1;
+      }
+      &.item_price{
+         font-weight: bold;
+      }
+   }
+   .actions{
+      margin-left: 40px;
+      display: flex;
+      gap: 10px;
+   }
+}

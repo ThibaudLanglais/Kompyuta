@@ -16,20 +16,20 @@
       /></a>
       <ul class="submenu">
         <li>
-          <a href="/">
+          <a [routerLink]="['categorie', 'fixes']">
             <h3 class="header">Ordinateurs fixes</h3>
             <img src="../../assets/ordi_fixes.png" alt="Ordinateurs fixes"
           /></a>
         </li>
         <div>
           <li>
-            <a href="/">
+            <a [routerLink]="['categorie', 'composants']">
               <h3 class="header">Composants</h3>
               <img src="../../assets/composants.png" alt="Composants"
             /></a>
           </li>
           <li>
-            <a href="/">
+            <a [routerLink]="['categorie', 'portables']">
               <h3 class="header">PC Portables</h3>
               <img
                 src="../../assets/ordi_portables.png"
@@ -42,9 +42,18 @@
     <li><a [routerLink]="['comparateur']">Comparateur</a></li>
   </ul>
   <div class="buttons">
-    <img src="../../assets/search.svg" alt="" />
-    <img src="../../assets/basket.svg" alt="" />
-    <img src="../../assets/account.svg" alt="" />
+    <div>
+      <img src="../../assets/search.svg" alt="" />
+    </div>
+    <div>
+      <span *ngIf="panierItemsNumber" class="badge">{{
+        panierItemsNumber
+      }}</span>
+      <img src="../../assets/basket.svg" alt="" />
+    </div>
+    <div>
+      <img src="../../assets/account.svg" alt="" />
+    </div>
   </div>
   <button (click)="toggleMenu()" class="mobile-toggle">
     <span></span>

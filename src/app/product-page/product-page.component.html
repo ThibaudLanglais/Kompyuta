@@ -1,44 +1,44 @@
-<div class="content">
+<div class="content" *ngIf="data">
   <app-breadcrumb></app-breadcrumb>
-  <p>{{data}}</p>
   <section>
     <div class="product-infos">
       <div class="product-gallery">
         <div class="main">
-          <img src="{{ currentImage }}" alt="Image du Produit" />
+          <img
+            src="../../assets/images_ordis/{{ currentImage }}"
+            alt="Image du Produit"
+          />
         </div>
         <div class="gallery">
-          <div *ngFor="let image of images" class="el">
+          <div *ngFor="let image of data.images" class="el">
             <img
               (click)="updateMain(image)"
-              src="{{ image }}"
+              src="../../assets/images_ordis/{{ image }}"
               alt="Image du Produit"
             />
           </div>
         </div>
       </div>
       <div class="product-desc">
-        <h1>Ordinateur gamerz</h1>
+        <h1>{{ data.marque + " - " + data.nom }}</h1>
         <div class="reviews">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-thin fa-star"></i>
-          <i class="fa-thin fa-star"></i>
-          <span class="avis">(110avis)</span>
+          <i *ngFor="let i of filledStars" class="fa-solid fa-star"></i>
+          <i *ngFor="let i of shallowStars" class="fa-thin fa-star"></i>
+          <span class="avis"
+            >({{ data.reviews.positive + data.reviews.negative }} avis)</span
+          >
         </div>
-        <h2 class="price">449.00€</h2>
-        <p class="desc">
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-          bla bla bla bla bla
-        </p>
+        <h2 class="price">{{ data.prix }}€</h2>
+        <p class="desc">{{ data.description }}</p>
         <div class="actions">
           <app-text-icon-button
             image="<i class='fa-solid fa-pen'></i>"
           ></app-text-icon-button>
           <app-text-icon-button text="Comparer"></app-text-icon-button>
-          <app-text-icon-button text="Acheter"></app-text-icon-button>
+          <app-text-icon-button
+            (click)="onClickAjouterPanier()"
+            text="Ajouter au panier"
+          ></app-text-icon-button>
         </div>
       </div>
     </div>
@@ -56,32 +56,56 @@
     <ul>
       <li>
         <img src="../../assets/ram.png" alt="Ram" />
-        <p>Corsair Value Select 16 Go (2x 8 Go) DDR3 1600 MHz CL11</p>
+        <p>
+          Corsair Value Select {{ data.system.ram }} Go (2x{{
+            data.system.ram / 2
+          }}
+          Go) DDR3 1600 MHz CL11
+        </p>
+        <!-- <p>Corsair Value Select 16 Go (2x 8 Go) DDR3 1600 MHz CL11</p> -->
       </li>
       <li>
         <img src="../../assets/ssd.png" alt="Storage" />
-        <p>Seagate BarraCuda 2 To (ST2000DM008)</p>
+        <!-- <p>Seagate BarraCuda 2 To (ST2000DM008)</p> -->
+        <p>
+          {{ data.system.hdd.type }} {{ data.system.hdd.capacite }}Go ({{
+            data.system.hdd["vitesse-transfert"]
+          }}MB/s)
+        </p>
       </li>
-      <li>
+      <!-- <li>
         <img src="../../assets/power.png" alt="Power Supply" />
         <p>Corsair CV450 80PLUS Bronze</p>
       </li>
       <li>
         <img src="../../assets/fan.png" alt="Fans" />
         <p>be quiet! Pure Rock 2 Black</p>
-      </li>
+      </li> -->
       <li>
         <img src="../../assets/gpu.png" alt="GPU" />
-        <p>MSI GeForce GT 1030 2GHD4 LP OC</p>
+        <p>{{ data.system.cg.marque + " " + data.system.cg.modele }}</p>
+        <!-- <p>MSI GeForce GT 1030 2GHD4 LP OC</p> -->
       </li>
       <li>
         <img src="../../assets/cpu.png" alt="CPU" />
-        <p>Intel Pentium Gold G6405 (4.1 GHz)</p>
+        <p>
+          {{
+            data.system.cpu.marque +
+              " " +
+              data.system.cpu.nom +
+              " (" +
+              data.system.cpu.core +
+              " coeurs / " +
+              data.system.cpu["frequence-max"] / 1000 +
+              "GHz)"
+          }}
+        </p>
+        <!-- <p>Intel Pentium Gold G6405 (4.1 GHz)</p> -->
       </li>
-      <li>
+      <!-- <li>
         <img src="../../assets/motherboard.png" alt="Motherboard" />
         <p>Gigabyte H410M S2H V3</p>
-      </li>
+      </li> -->
     </ul>
     <app-text-icon-button
       text="Éditer"
@@ -91,9 +115,9 @@
   <section class="articles_similaires">
     <h3 class="bold_title">Articles similaires</h3>
     <div class="carousel">
-      <!-- <app-card></app-card>
       <app-card></app-card>
-      <app-card></app-card> -->
+      <app-card></app-card>
+      <app-card></app-card>
     </div>
   </section>
 </div>

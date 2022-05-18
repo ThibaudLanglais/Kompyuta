@@ -27,8 +27,10 @@ nav{
          }
       }
       .buttons{
-         img{
-            filter: none;
+         & > div{
+            img{
+               filter: none;
+            }
          }
       }
       .mainmenu{
@@ -159,10 +161,28 @@ nav{
       z-index: 1;
       display: flex;
       gap: 15px;
-      img{
-         width: 25px;
-         height: 25px;
-         filter: invert(1);
+      & > div{
+         position: relative;
+         .badge{
+            z-index: 1;
+            position: absolute;
+            bottom: -5px;
+            left: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+         }
+         img{
+            width: 25px;
+            height: 25px;
+            filter: invert(1);
+         }
       }
    }
    .mobile-toggle{
