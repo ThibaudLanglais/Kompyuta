@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'configurateur', component: ConfigurateurComponent},
   { path: 'test', component: PageTestComponent},
   { path: 'mentions-legales', component: MentionsLegalesComponent},
-  // { path: '**', component: PageNotFoundComponent},
+  { path: '404', component: PageNotFoundComponent},
+  { path: '**', redirectTo: '404', pathMatch: 'full'},
 ];
 
 @NgModule({
