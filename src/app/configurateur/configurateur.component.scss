@@ -1,0 +1,89 @@
+.columns{
+    display: flex;
+    gap: 20px;
+    .col{
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .right{
+        flex: 1;
+        gap: 15px;
+    }
+    .left{
+        gap: 20px;
+        .item_image{
+            border: 1px solid black;
+            aspect-ratio: 1;
+            height: 250px;
+            object-fit: contain;
+        }
+        .price_components{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .price_component{
+                display: flex;
+                justify-content: space-between;
+                p{
+                    font-size: 14px;
+                }
+                &.total, &.bonus3000{
+                    p{
+                        font-weight: bold;
+                    }
+                }
+                &.bonus3000{
+                    background: linear-gradient(
+                        45deg,
+                        rgba(255, 0, 0, 1) 0%,
+                        rgba(255, 154, 0, 1) 10%,
+                        rgba(208, 222, 33, 1) 20%,
+                        rgba(79, 220, 74, 1) 30%,
+                        rgba(63, 218, 216, 1) 40%,
+                        rgba(47, 201, 226, 1) 50%,
+                        rgba(28, 127, 238, 1) 60%,
+                        rgba(95, 21, 242, 1) 70%,
+                        rgba(186, 12, 248, 1) 80%,
+                        rgba(251, 7, 217, 1) 90%,
+                        rgba(255, 0, 0, 1) 100%
+                    );
+                    background-size: 200% 1800%;
+                    animation-name: BONUS3000;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation-direction: alternate-reverse;
+                }
+            }
+        }
+        .confirm_button{
+            margin: auto;
+        }
+    }
+}
+
+.modal_selection_composant{
+    position: fixed;
+    background-color: red;
+    left: 50%;
+    top: 40%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    .items{
+        .item{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+    }
+}
+
+@keyframes BONUS3000 { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
