@@ -1,0 +1,16 @@
+.items{
+   margin: 40px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.actions{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 15px;
+   .per_page_container{
+      display: flex;
+      gap: 10px;
+   }
+}

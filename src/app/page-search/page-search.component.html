@@ -1,0 +1,38 @@
+<div class="content">
+  <section>
+    <h1 class="header_2">Résultats de votre recherche</h1>
+    <p class="subtitle">Trouvez tous les produits que vous cherchez !</p>
+    <div class="items">
+      <app-search-item
+        *ngFor="let item of pages[pageIndex]"
+        [item]="item"
+      ></app-search-item>
+    </div>
+    <div class="actions">
+      <div class="per_page_container">
+        <label for="per_page">Afficher par</label>
+        <select
+          (change)="onPerPageChange()"
+          [formControl]="perPage"
+          name="per_page"
+          id="per_page"
+        >
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="50">50</option>
+          <option value="-1">Tout</option>
+        </select>
+      </div>
+      <app-text-icon-button
+        *ngIf="pageIndex != 0"
+        (click)="onPrevClick()"
+        text="Page précédente"
+      ></app-text-icon-button>
+      <app-text-icon-button
+      *ngIf="pageIndex != pages.length -1"
+        (click)="onNextClick()"
+        text="Page suivante"
+      ></app-text-icon-button>
+    </div>
+  </section>
+</div>
