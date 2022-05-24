@@ -13,8 +13,11 @@
         "ecran": null,
         "clavier": null,
         "system": {
-            "ram": 32,
+            "ram": {
+                "componentType": "ram",
+                "value": 32},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "X9 900",
                 "score": 25000,
@@ -23,12 +26,14 @@
                 "tdp": 125
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 3840,
                 "type": "nvme",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "RTZ 3080",
                 "score": 20000
@@ -51,8 +56,11 @@
         "ecran": null,
         "clavier": null,
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "X3 300",
                 "score": 12000,
@@ -61,12 +69,14 @@
                 "tdp": 65
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 1024,
                 "type": "nvme",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "RTZ 3030",
                 "score": 4000
@@ -89,8 +99,11 @@
         "ecran": null,
         "clavier": null,
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"AMDé",
                 "nom": "B5 5000",
                 "score": 15000,
@@ -99,12 +112,14 @@
                 "tdp": 65
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 1024,
                 "type": "nvme",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "RTZ 3050",
                 "score": 6500
@@ -136,8 +151,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"AMDé",
                 "nom": "B5 550",
                 "score": 12000,
@@ -146,12 +164,14 @@
                 "tdp": 25
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 1024,
                 "type": "nvme",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "mtx 350",
                 "score": 4000
@@ -186,8 +206,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"AMDé",
                 "nom": "B5 550",
                 "score": 12000,
@@ -196,12 +219,14 @@
                 "tdp": 25
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 1024,
                 "type": "nvme",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "mtx 350",
                 "score": 4000
@@ -236,8 +261,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"AMDé",
                 "nom": "B3 500",
                 "score": 7000,
@@ -246,12 +274,14 @@
                 "tdp": 15
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 1024,
                 "type": "ssd",
                 "rpm": null,
                 "vitesse-transfert": 300
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "RTZ 3050",
                 "score": 6500
@@ -286,8 +316,11 @@
             "pave-num": true
         },
         "system": {
-            "ram": 32,
+            "ram": {
+                "componentType": "ram",
+                "value": 32},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"AMDé",
                 "nom": "B9 5000",
                 "score": 20000,
@@ -296,12 +329,14 @@
                 "tdp": 45
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 3840,
                 "type": "mvne",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "RTZ 3080",
                 "score": 20000
@@ -336,8 +371,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"AMDé",
                 "nom": "B7 5000",
                 "score": 17000,
@@ -346,12 +384,14 @@
                 "tdp": 45
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 2048,
                 "type": "mvne",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "NVADIA",
                 "modele": "RTZ 3060",
                 "score": 12000
@@ -386,8 +426,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "X7 770Y",
                 "score": 7500,
@@ -396,12 +439,14 @@
                 "tdp": 12
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 1024,
                 "type": "mvne",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "INTELLE",
                 "modele": "HD IRIS",
                 "score": 1500
@@ -436,8 +481,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "X5 550Y",
                 "score": 6500,
@@ -446,12 +494,14 @@
                 "tdp": 10
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 256,
                 "type": "mvne",
                 "rpm": null,
                 "vitesse-transfert": 3000
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "INTELLE",
                 "modele": "HD IRIS",
                 "score": 1500
@@ -486,8 +536,11 @@
             "pave-num": true
         },
         "system": {
-            "ram": 16,
+            "ram": {
+                "componentType": "ram",
+                "value": 16},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "X5 550",
                 "score": 7900,
@@ -496,12 +549,14 @@
                 "tdp": 25
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 2048,
                 "type": "hdd",
                 "rpm": 7200,
                 "vitesse-transfert": 100
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "INTELLE",
                 "modele": "HD 9000",
                 "score": 395
@@ -536,8 +591,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 8,
+            "ram": {
+                "componentType": "ram",
+                "value": 8},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "X3 300",
                 "score": 5200,
@@ -546,12 +604,14 @@
                 "tdp": 15
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 512,
                 "type": "ssd",
                 "rpm": null,
                 "vitesse-transfert": 400
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "INTELLE",
                 "modele": "HD 9000",
                 "score": 395
@@ -586,8 +646,11 @@
             "pave-num": false
         },
         "system": {
-            "ram": 4,
+            "ram": {
+                "componentType": "ram",
+                "value": 4},
             "cpu": {
+                "componentType": "cpu",
                 "marque":"INTELLE",
                 "nom": "ATAUM",
                 "score": 1250,
@@ -596,12 +659,14 @@
                 "tdp": 5
             },
             "hdd": {
+                "componentType":"hdd",
                 "capacite": 256,
                 "type": "mmc",
                 "rpm": null,
                 "vitesse-transfert": 50
             },
             "cg": {
+                "componentType": "cg",
                 "marque": "INTELLE",
                 "modele": "HD 9000",
                 "score": 395
