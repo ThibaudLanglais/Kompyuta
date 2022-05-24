@@ -16,11 +16,11 @@ import { ConfigurateurComponent } from './configurateur/configurateur.component'
 import { ComparateurComponent } from './comparateur/comparateur.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategorieComponent } from './categorie/categorie.component';
-import { NavigationStart } from '@angular/router';
 import { SearchItemComponent } from './search-item/search-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagePanierComponent } from './page-panier/page-panier.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageSearchComponent } from './page-search/page-search.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CategorieComponent,
     SearchItemComponent,
     PagePanierComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PageSearchComponent
   ],
   imports: [
     BrowserModule,

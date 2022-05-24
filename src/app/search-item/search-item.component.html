@@ -5,14 +5,17 @@
     alt="Image du produit"
   />
   <div class="item_title_container">
-    <p class="item_title">{{ item.marque + " - " + item.nom }}</p>
+    <p class="item_title">
+      {{ item.marque || "" }}
+      {{ item.nom || item.modele || item.composant }}
+    </p>
     <p *ngIf="item.custom" class="custom">Personnalisé</p>
   </div>
-  <p class="item_price">{{ item.prix }}€</p>
-  <div class="actions">
+  <p *ngIf="item.prix" class="item_price">{{ item.prix }}€</p>
+  <div *ngIf="item.typeObjet != 'composant'" class="actions">
     <app-text-icon-button
-      (click)="deleteFromPanier(index)"
       *ngIf="trash && index != undefined"
+      (click)="deleteFromPanier(index)"
       color="white"
       image='<i class="fa-solid fa-trash"></i>'
       bg="var(--blue)"

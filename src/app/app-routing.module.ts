@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PagePanierComponent } from './page-panier/page-panier.component';
+import { PageSearchComponent } from './page-search/page-search.component';
 import { PageTestComponent } from './page-test/page-test.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'search', component: PageSearchComponent},
   { path: 'product', redirectTo: ''},
   { path: 'product/:id', component: ProductPageComponent},
   { path: 'categorie', redirectTo: ''},

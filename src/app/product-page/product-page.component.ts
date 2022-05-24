@@ -10,7 +10,6 @@ import { PanierService } from '../services/panier/panier.service';
 })
 export class ProductPageComponent implements OnInit {
 
-  // images: String[] = [];
   currentImage: String = '';
   data: any;
   filledStars: any;

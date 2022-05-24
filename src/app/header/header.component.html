@@ -46,10 +46,10 @@
       <img src="../../assets/search.svg" alt="" />
     </button>
     <div>
-      <span *ngIf="panierItemsNumber" class="badge">{{
-        panierItemsNumber
-      }}</span>
       <a class="btn_container" [routerLink]="['panier']">
+        <span *ngIf="panierItemsNumber" class="badge">{{
+          panierItemsNumber
+        }}</span>
         <img src="../../assets/basket.svg" alt="" />
       </a>
     </div>
@@ -62,8 +62,14 @@
     <span></span>
     <span></span>
   </button>
-  <form class="search" [ngClass]="{ active: searchActive }">
+  <form
+    [formGroup]="searchFormGroup"
+    (ngSubmit)="onSearchSubmit()"
+    class="search"
+    [ngClass]="{ active: searchActive }"
+  >
     <input
+      formControlName="query"
       placeholder="Recherchez un produit..."
       type="text"
       name="search_bar"

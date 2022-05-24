@@ -19,13 +19,15 @@ export class DataServiceService {
   addImages(array: any[]){
     var res: any[] = []
     array.forEach((el:any) => {
-      el.images = []
-      el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}.jpg`)
-      for (let i = 2; i < 4; i++) {
-        el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}_${i}.jpg`)
+      if(el.typeObjet == 'pc'){
+        el.images = []
+        el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}.jpg`)
+        for (let i = 2; i < 4; i++) {
+          el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}_${i}.jpg`)
+        }
+        res.push(el)
       }
-      res.push(el)
     });
-    return res;
+    return res.length > 0 ? res : array;
   }
 }

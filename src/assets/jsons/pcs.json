@@ -1,5 +1,6 @@
 [
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 1,
         "reviews":{
@@ -37,6 +38,7 @@
         "prix": 1000
     }, 
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 2,
         "reviews":{
@@ -74,6 +76,7 @@
         "prix": 300
     }, 
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 3,
         "reviews":{
@@ -111,6 +114,7 @@
         "prix": 500
     }, 
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 13,
         "reviews":{
@@ -160,6 +164,7 @@
         "prix": 900
     },      
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 4,
         "reviews":{
@@ -209,6 +214,7 @@
         "prix": 900
     },    
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 5,
         "reviews":{
@@ -258,6 +264,7 @@
         "prix": 800
     },      
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 6,
         "reviews":{
@@ -307,6 +314,7 @@
         "prix": 1700
     },      
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 7,
         "reviews":{
@@ -356,6 +364,7 @@
         "prix": 1500
     },
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 8,
         "reviews":{
@@ -405,6 +414,7 @@
         "prix": 1200
     },   
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 9,
         "reviews":{
@@ -454,6 +464,7 @@
         "prix": 900
     },  
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 10,
         "reviews":{
@@ -503,6 +514,7 @@
         "prix": 700
     },
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 11,
         "reviews":{
@@ -552,6 +564,7 @@
         "prix": 700
     },
     {
+        "typeObjet": "pc",
         "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
         "id": 12,
         "reviews":{

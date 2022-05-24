@@ -32,8 +32,8 @@
     <div class="results">
       <div class="topbar">
         <p>Modèle</p>
-        <p>Prix</p>
-        <p>Actions</p>
+        <p *ngIf="title != 'Composants'">Prix</p>
+        <p *ngIf="title != 'Composants'">Actions</p>
       </div>
       <div class="items">
         <app-search-item
