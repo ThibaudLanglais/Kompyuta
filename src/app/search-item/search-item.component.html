@@ -6,7 +6,7 @@
   />
   <div class="item_title_container">
     <p class="item_title">
-      {{ item.marque || "" }}
+      {{ item.marque || (item.value && "RAM " + item.value + "GB") || (item.type && item.type + " " + item.capacite + "GB") }}
       {{ item.nom || item.modele || item.composant }}
     </p>
     <p *ngIf="item.custom" class="custom">Personnalisé</p>
@@ -14,13 +14,13 @@
   <p *ngIf="item.prix" class="item_price">{{ item.prix }}€</p>
   <div *ngIf="item.typeObjet != 'composant'" class="actions">
     <app-text-icon-button
-      *ngIf="trash && index != undefined"
+      *ngIf="trash && index != undefined && !configurateur"
       (click)="deleteFromPanier(index)"
       color="white"
       image='<i class="fa-solid fa-trash"></i>'
       bg="var(--blue)"
     ></app-text-icon-button>
-    <a [routerLink]="['/product', item.id]">
+    <a *ngIf="!configurateur" [routerLink]="['/product', item.id]">
       <app-text-icon-button
         color="white"
         image='<i class="fa-solid fa-eye"></i>'
@@ -28,6 +28,7 @@
       ></app-text-icon-button>
     </a>
     <app-text-icon-button
+      (click)="onEditClick()"
       color="white"
       image='<i class="fa-solid fa-pen"></i>'
       bg="var(--blue)"

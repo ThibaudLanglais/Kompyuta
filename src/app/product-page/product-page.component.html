@@ -32,6 +32,7 @@
         <p class="desc">{{ data.description }}</p>
         <div class="actions">
           <app-text-icon-button
+            (click)="navigateConfigurateur()"
             image="<i class='fa-solid fa-pen'></i>"
           ></app-text-icon-button>
           <app-text-icon-button text="Comparer"></app-text-icon-button>
@@ -62,29 +63,18 @@
           }}
           Go) DDR3 1600 MHz CL11
         </p>
-        <!-- <p>Corsair Value Select 16 Go (2x 8 Go) DDR3 1600 MHz CL11</p> -->
       </li>
       <li>
         <img src="../../assets/ssd.png" alt="Storage" />
-        <!-- <p>Seagate BarraCuda 2 To (ST2000DM008)</p> -->
         <p>
           {{ data.system.hdd.type }} {{ data.system.hdd.capacite }}Go ({{
             data.system.hdd["vitesse-transfert"]
           }}MB/s)
         </p>
       </li>
-      <!-- <li>
-        <img src="../../assets/power.png" alt="Power Supply" />
-        <p>Corsair CV450 80PLUS Bronze</p>
-      </li>
-      <li>
-        <img src="../../assets/fan.png" alt="Fans" />
-        <p>be quiet! Pure Rock 2 Black</p>
-      </li> -->
       <li>
         <img src="../../assets/gpu.png" alt="GPU" />
         <p>{{ data.system.cg.marque + " " + data.system.cg.modele }}</p>
-        <!-- <p>MSI GeForce GT 1030 2GHD4 LP OC</p> -->
       </li>
       <li>
         <img src="../../assets/cpu.png" alt="CPU" />
@@ -100,12 +90,7 @@
               "GHz)"
           }}
         </p>
-        <!-- <p>Intel Pentium Gold G6405 (4.1 GHz)</p> -->
       </li>
-      <!-- <li>
-        <img src="../../assets/motherboard.png" alt="Motherboard" />
-        <p>Gigabyte H410M S2H V3</p>
-      </li> -->
     </ul>
     <app-text-icon-button
       text="Éditer"

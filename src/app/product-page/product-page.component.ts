@@ -48,4 +48,8 @@ export class ProductPageComponent implements OnInit {
     this.panierService.addPanier(this.data)
   }
 
+  navigateConfigurateur(){
+    this.router.navigate(['configurateur'], {queryParams: {pcData: encodeURIComponent(JSON.stringify(this.data))}})
+  }
+
 }
