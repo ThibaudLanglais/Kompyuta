@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DataServiceService } from '../services/data/data-service.service';
+import { DataService } from '../services/data/data.service';
 
 @Component({
   selector: 'app-configurateur',
@@ -14,12 +14,10 @@ export class ConfigurateurComponent implements OnInit {
   components: any[] = [];
   filteredComponents: any[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataServiceService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getComponents().subscribe((val: any) => {
-      this.components = val
-    })
+    this.dataService.dataSubscription().subscribe((dataService: any) => this.components = dataService.components);
     this.route.queryParams
       .subscribe(params => {
         if(!params['pcData']) this.router.navigate(['404']);

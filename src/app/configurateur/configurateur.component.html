@@ -1,54 +1,68 @@
 <div class="content">
-    <div class="modal_selection_composant">
-        <div class="items">
-            <div class="item">
-                <p>Nom</p>
-                <app-text-icon-button image='<i class="fa-solid fa-plus"></i>'></app-text-icon-button>
-            </div>
-        </div>
+  <div class="modal_selection_composant">
+    <div class="items">
+      <div class="item">
+        <p>Nom</p>
+        <app-text-icon-button
+          image='<i class="fa-solid fa-plus"></i>'
+        ></app-text-icon-button>
+      </div>
     </div>
-    <section>
-        <h2 class="header_2 h_3000">Le configurateur</h2>
-    </section>
-    <section>
-        <div class="columns">
-            <div class="left col">
-                <img class="item_image" src="../../assets/images_ordis/{{currentPcData.images[0]}}" alt="">
-                <h3 class="item_title">{{ currentPcData.marque + ' ' +currentPcData.nom }}</h3>
-                <div class="prices">
-                    <div class="price_components">
-                        <span class="clear"></span>
-                        <div class="price_component">
-                            <p class="price_title">Prix composants</p>
-                            <p class="price_value">699.00€</p>
-                        </div>
-                        <div class="price_component">
-                            <p class="price_title">Frais de port</p>
-                            <p class="price_value">15.00€</p>
-                        </div>
-                        <div class="price_component">
-                            <p class="price_title">TVA (20%)</p>
-                            <p class="price_value">139.80€</p>
-                        </div>
-                        <div class="price_component bonus3000">
-                            <p class="price_title">Bonus 3000</p>
-                            <p class="price_value">2146.20€</p>
-                        </div>
-                        <span class="clear"></span>
-                        <div class="price_component total">
-                            <p class="price_title">Total</p>
-                            <p class="price_value">3000.00€</p>
-                        </div>
-                    </div>
-                    <div class="price_total"></div>    
-                </div>
-                <app-text-icon-button class="confirm_button" text="Confirmer la config"></app-text-icon-button>
+  </div>
+  <section>
+    <h2 class="header_2 h_3000">Le configurateur</h2>
+  </section>
+  <section>
+    <div class="columns">
+      <div class="left col">
+        <img
+          class="item_image"
+          src="../../assets/images_ordis/{{ currentPcData.images[0] }}"
+          alt=""
+        />
+        <h3 class="item_title">
+          {{ currentPcData.marque + " " + currentPcData.nom }}
+        </h3>
+        <div class="prices">
+          <div class="price_components">
+            <span class="clear"></span>
+            <div class="price_component">
+              <p class="price_title">Prix composants</p>
+              <p class="price_value">699.00€</p>
             </div>
-            <div class="right col">
-                <div *ngFor="let key of pcSystemKeys" class="component">
-                    <app-search-item [item]="currentPcData.system[key]" (buttonClicked)="handleEditClick($event)" [configurateur]="true"></app-search-item>
-                </div>
+            <div class="price_component">
+              <p class="price_title">Frais de port</p>
+              <p class="price_value">15.00€</p>
             </div>
+            <div class="price_component">
+              <p class="price_title">TVA (20%)</p>
+              <p class="price_value">139.80€</p>
+            </div>
+            <div class="price_component bonus3000">
+              <p class="price_title">Bonus 3000</p>
+              <p class="price_value">2146.20€</p>
+            </div>
+            <span class="clear"></span>
+            <div class="price_component total">
+              <p class="price_title">Total</p>
+              <p class="price_value">3000.00€</p>
+            </div>
+          </div>
+          <div class="price_total"></div>
         </div>
-    </section>
+        <app-text-icon-button
+          class="confirm_button"
+          text="Confirmer la config"
+        ></app-text-icon-button>
+      </div>
+      <div class="right col">
+        <div *ngFor="let key of pcSystemKeys" class="component">
+          <app-search-item
+            [item]="currentPcData.system[key]"
+            [configurateur]="true"
+          ></app-search-item>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

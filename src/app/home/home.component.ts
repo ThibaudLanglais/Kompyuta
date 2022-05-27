@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataServiceService } from '../services/data/data-service.service';
+import { DataService } from '../services/data/data.service';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +10,14 @@ export class HomeComponent implements OnInit {
 
   pcs: any[] = [];
 
-  constructor(private dataService: DataServiceService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getPcs().subscribe((val: any) => {
-      this.pcs = this.dataService.addImages(val)     
+    this.pcs = [...this.dataService.dataValue.pcs];
+    console.log(this.pcs[0]?.images);
+    this.dataService.dataSubscription().subscribe((val: any) => {
+      this.pcs = [...val.pcs]
+      console.log(this.pcs[0]?.images);
     });
   }
 

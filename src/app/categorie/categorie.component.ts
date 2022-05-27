@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { filter, map, toArray } from 'rxjs';
-import { DataServiceService } from '../services/data/data-service.service';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DataService } from '../services/data/data.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-categorie',
@@ -36,7 +35,7 @@ export class CategorieComponent implements OnInit {
       subtitle: 'Retrouvez tous les ingrédients d’un bon PC !' 
     },
   };
-  constructor(private route: ActivatedRoute, private dataService: DataServiceService) {
+  constructor(private route: ActivatedRoute, private dataService: DataService) {
     this.filtersForm = new FormGroup({
       priceControl: new FormControl(0)
     })
@@ -44,24 +43,16 @@ export class CategorieComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((val: any)=>{
-      this.title = this.categoriesTable[val.slug].title
-      this.subtitle = this.categoriesTable[val.slug].subtitle
+      this.title = this.categoriesTable[val.slug].title;
+      this.subtitle = this.categoriesTable[val.slug].subtitle;
       //Get the data
-      if(val.slug == 'composants'){
-        this.dataService.getComponents().subscribe((components:any) => {
-          this.data = components
-          this.filteredData = this.data
-          // this.data = this.dataService.addImages(this.data);
-          this.initForm(val)
-        });
-      }else{
-        this.dataService.getPcs().pipe(map((pcs: any) => pcs.filter((pc: any) => pc.type == val.slug))).subscribe((pcs:any) => {
-          this.data = pcs
-          this.data = this.dataService.addImages(this.data);
-          this.filteredData = this.data
-          this.initForm(val)
-        });
-      }
+
+      this.data = this.filteredData = this.dataService.getItemsByCat(val.slug);
+      this.initForm(val);
+      this.dataService.dataSubscription().subscribe((serviceData: any) => {
+        this.data = this.filteredData = this.dataService.getItemsByCat(val.slug);
+        this.initForm(val);
+      })
     })
   }
 
