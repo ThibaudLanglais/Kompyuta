@@ -1,4 +1,4 @@
-nav{
+nav {
    top: 0;
    position: fixed;
    padding-top: 10px;
@@ -255,9 +255,22 @@ nav{
    }
 }
 @media screen and(max-width: 900px) {
+   nav {
+      width: 100%;
+      padding: 5px 50px;
+   
+   }
    nav, nav.white{
       .logo{
          flex: 1;
+
+            p {
+               font-size: 0.85rem;
+            }
+      }
+
+      .buttons .btn_container img {
+         width: 18px;
       }
       .mobile-toggle{
          display: block;
@@ -348,7 +361,7 @@ nav{
                   transform: translateX(-100%);
                }
                &:last-child{
-                  transform: translate(-4px, -1px) rotate(45deg);
+                  transform: translateX(-4px) rotate(45deg);
                }
             }
          }
