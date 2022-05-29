@@ -14,3 +14,14 @@ button{
       width: 40px;
    }
 }
+
+@media screen and (max-width: 420px) {
+   button {
+      margin: 5px auto;
+      width: 280px;
+      &.iconOnly {
+         width: 280px;
+         margin-top: 20px;
+      }
+   }
+}
