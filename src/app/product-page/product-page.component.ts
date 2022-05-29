@@ -10,7 +10,7 @@ import { PanierService } from '../services/panier/panier.service';
 })
 export class ProductPageComponent implements OnInit {
 
-  currentImage: String = '';
+  currentImageIndex: number = 0;
   data: any;
   filledStars: any;
   shallowStars: any;
@@ -32,20 +32,19 @@ export class ProductPageComponent implements OnInit {
     var pc = this.dataService.getPcFromId(params.id);
     if(pc) {
       this.data = pc;
-      this.currentImage = this.data.images[0]
-      this.data.images = this.data.images.filter((a:string)=>a != this.currentImage);
       var positive = Math.ceil((this.data.reviews.positive*5)/(this.data.reviews.positive + this.data.reviews.negative))
       this.filledStars = Array(positive)
       this.shallowStars = Array(5-positive)
     }
-    else if(this.dataService.dataValue) this.router.navigate([''])
+    else if(this.dataService.dataFetched) {
+      this.router.navigate([''])
+      console.log("redirecting");
+      
+    }
   }
 
-  updateMain(newMain: String){
-    var tmp = this.currentImage;
-    this.currentImage = newMain;
-    this.data.images = this.data.images.filter((a: string)=> a != this.currentImage);
-    this.data.images.push(tmp);
+  updateMain(newMain: number){
+    this.currentImageIndex = newMain;
   }
 
   onClickAjouterPanier(){

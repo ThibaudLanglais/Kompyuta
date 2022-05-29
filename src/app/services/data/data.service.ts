@@ -9,6 +9,7 @@ export class DataService {
 
   dataState = new Subject<Data>();
   dataValue: Data = {components: [], pcs: []};
+  dataFetched: boolean = false;
 
   componentsObservable: Observable<any> = new Observable();
   pcsObservable: Observable<any> = new Observable();
@@ -22,6 +23,7 @@ export class DataService {
   getComponents(): void{
     this.http.get('../../assets/jsons/components.json').subscribe((val: any) => {
       this.dataValue.components = val;
+      if(this.dataValue.pcs.length != 0 && this.dataValue.components.length != 0) this.dataFetched = true;
       this.nextValue();
     });
   }
@@ -29,12 +31,12 @@ export class DataService {
   getPcs(): void{
     this.http.get('../../assets/jsons/pcs.json').subscribe((val: any) =>{
       this.dataValue.pcs = this.addImages(val);
+      if(this.dataValue.pcs.length != 0 && this.dataValue.components.length != 0) this.dataFetched = true;
       this.nextValue();
     });
   }
 
   getPcFromId(id: number): any{
-    console.log(id);
     return this.dataValue.pcs.filter((el: any) => el.id == id)[0];
   }
 

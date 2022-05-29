@@ -5,18 +5,20 @@
       <div class="product-gallery">
         <div class="main">
           <img
-            src="../../assets/images_ordis/{{ currentImage }}"
+            src="../../assets/images_ordis/{{ data.images[currentImageIndex] }}"
             alt="Image du Produit"
           />
         </div>
         <div class="gallery">
-          <div *ngFor="let image of data.images" class="el">
-            <img
-              (click)="updateMain(image)"
-              src="../../assets/images_ordis/{{ image }}"
-              alt="Image du Produit"
-            />
-          </div>
+          <ng-container *ngFor="let image of data.images; let index = index">
+            <div *ngIf="image != data.images[currentImageIndex]" class="el">
+              <img
+                (click)="updateMain(index)"
+                src="../../assets/images_ordis/{{ image }}"
+                alt="Image du Produit"
+              />
+            </div>
+          </ng-container>
         </div>
       </div>
       <div class="product-desc">
