@@ -2,16 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 1;
   gap: 20px;
   border-radius: 7px;
   padding: 10px;
   height: 250px;
-  width: 40vw;
-  max-width: 620px;
+  width: 30vw;
+  // max-width: 620px;
+  // min-width: 300px;
+  width: 600px;
   border: 1px solid black;
   img {
+    width: clamp(150px, 20vw, 250px);
     height: 100%;
-    width: 100%;
     object-fit: contain;
   }
   .infos {
@@ -24,5 +27,15 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .card {
+    flex-direction: column;
+    min-width: 280px;
+    width: 50vw;
+    height: auto;
   }
 }

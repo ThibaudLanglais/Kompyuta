@@ -30,7 +30,7 @@ div{
          margin-left: 10%;
          margin-bottom: 5%;
          max-width: 500px;
-         h1{
+         h2{
             color: white;
             font-size: 2rem;
             font-weight: normal;
@@ -121,7 +121,7 @@ div{
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      h1{
+      h2{
          margin-bottom: 100px;
          width: 100%;
          text-align: center;
@@ -129,6 +129,13 @@ div{
          &::before{
             content: none;
          }
+      }
+
+      .lower-contact {
+         width: 100%;
+         display: flex;
+         justify-content: space-around;
+
       }
       & > div{
          color: white;
@@ -146,7 +153,7 @@ div{
             min-height: 60px;
             box-sizing: border-box;
             border-radius: 7px;
-            width: 300px;
+            width: clamp(250px, 10vw, 350px);
             &[type="email"], &[type="text"]{
                background: white;
                color: var(--black);
@@ -182,6 +189,10 @@ div{
    }
 }
 
+@media screen and (max-width: 1300px) {
+   // ...
+}
+
 @media screen and (max-width : 1000px) {
    div {
       .hero {
@@ -198,7 +209,29 @@ div{
          }
    }
 
-   div .contact h1 {
-      margin-bottom: 10px;
+   div .contact h2 {
+      margin-bottom: 20px;
+   }
+}
+
+@media screen and (max-width: 850px) {
+
+   div .contact {
+      gap: 30px;
+      text-align: center;
+   }
+
+   div .contact .lower-contact > div {
+      margin-bottom: 30px;
+   }
+
+   div .contact .lower-contact {
+      flex-direction: column;
+   }
+
+   div .contact form {
+      align-items: center;
+
+      label { margin: 5px; }
    }
 }
