@@ -1,681 +1,408 @@
 [
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 1,
-        "reviews":{
-            "positive": 42,
-            "negative": 2
-        },
-        "marque": "ASSER",
-        "nom": "Respire TC10",
-        "type": "fixes",
-        "ecran": null,
-        "clavier": null,
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 32},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "X9 900",
-                "score": 25000,
-                "core": 2,
-                "frequence-max": 5900,
-                "tdp": 125
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 3840,
-                "type": "nvme",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "RTZ 3080",
-                "score": 20000
-            }
-        },
-        "batterie" : null,
-        "prix": 1000
-    }, 
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 2,
-        "reviews":{
-            "positive": 62,
-            "negative": 21
-        },
-        "marque": "ASSER",
-        "nom": "Respire TC2",
-        "type": "fixes",
-        "ecran": null,
-        "clavier": null,
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "X3 300",
-                "score": 12000,
-                "core": 2,
-                "frequence-max": 4200,
-                "tdp": 65
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 1024,
-                "type": "nvme",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "RTZ 3030",
-                "score": 4000
-            }
-        },
-        "batterie" : null,
-        "prix": 300
-    }, 
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 3,
-        "reviews":{
-            "positive": 658,
-            "negative": 53
-        },
-        "marque": "ASSER",
-        "nom": "Respire TC",
-        "type": "fixes",
-        "ecran": null,
-        "clavier": null,
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"AMDé",
-                "nom": "B5 5000",
-                "score": 15000,
-                "core": 6,
-                "frequence-max": 4200,
-                "tdp": 65
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 1024,
-                "type": "nvme",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "RTZ 3050",
-                "score": 6500
-            }
-        },
-        "batterie" : null,
-        "prix": 500
-    }, 
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 13,
-        "reviews":{
-            "positive": 4,
-            "negative": 1000
-        },
-        "marque": "ASSER",
-        "nom": "Swif 15",
-        "type": "portables",
-        "ecran": {
-            "taille": 15,
-            "type": "TN",
-            "dpi": 100
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": true,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"AMDé",
-                "nom": "B5 550",
-                "score": 12000,
-                "core": 6,
-                "frequence-max": 4200,
-                "tdp": 25
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 1024,
-                "type": "nvme",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "mtx 350",
-                "score": 4000
-            }
-        },
-        "batterie" : {
-            "capacite": 55,
-            "autonomie": 6
-        },
-        "prix": 900
-    },      
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 4,
-        "reviews":{
-            "positive": 420,
-            "negative": 69
-        },
-        "marque": "ASSER",
-        "nom": "Swif 13",
-        "type": "portables",
-        "ecran": {
-            "taille": 13,
-            "type": "IPS",
-            "dpi": 100
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": true,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"AMDé",
-                "nom": "B5 550",
-                "score": 12000,
-                "core": 6,
-                "frequence-max": 4200,
-                "tdp": 25
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 1024,
-                "type": "nvme",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "mtx 350",
-                "score": 4000
-            }
-        },
-        "batterie" : {
-            "capacite": 55,
-            "autonomie": 6
-        },
-        "prix": 900
-    },    
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 5,
-        "reviews":{
-            "positive": 123,
-            "negative": 25
-        },
-        "marque": "ASSER",
-        "nom": "Swif 14",
-        "type": "portables",
-        "ecran": {
-            "taille": 14,
-            "type": "IPS",
-            "dpi": 100
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": false,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"AMDé",
-                "nom": "B3 500",
-                "score": 7000,
-                "core": 4,
-                "frequence-max": 4000,
-                "tdp": 15
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 1024,
-                "type": "ssd",
-                "rpm": null,
-                "vitesse-transfert": 300
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "RTZ 3050",
-                "score": 6500
-            }
-        },
-        "batterie" : {
-            "capacite": 55,
-            "autonomie": 4
-        },
-        "prix": 800
-    },      
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 6,
-        "reviews":{
-            "positive": 333,
-            "negative": 53
-        },
-        "marque": "ROJ",
-        "nom": "Flow Z15",
-        "type": "portables",
-        "ecran": {
-            "taille": 15,
-            "type": "TN",
-            "dpi": 100
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": true,
-            "type": "azerty",
-            "pave-num": true
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 32},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"AMDé",
-                "nom": "B9 5000",
-                "score": 20000,
-                "core": 10,
-                "frequence-max": 4400,
-                "tdp": 45
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 3840,
-                "type": "mvne",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "RTZ 3080",
-                "score": 20000
-            }
-        },
-        "batterie" : {
-            "capacite": 65,
-            "autonomie": 3
-        },
-        "prix": 1700
-    },      
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 7,
-        "reviews":{
-            "positive": 121,
-            "negative": 22
-        },
-        "marque": "ROJ",
-        "nom": "Flow Z13",
-        "type": "portables",
-        "ecran": {
-            "taille": 13,
-            "type": "TN",
-            "dpi": 100
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": true,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"AMDé",
-                "nom": "B7 5000",
-                "score": 17000,
-                "core": 8,
-                "frequence-max": 4400,
-                "tdp": 45
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 2048,
-                "type": "mvne",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "NVADIA",
-                "modele": "RTZ 3060",
-                "score": 12000
-            }
-        },
-        "batterie" : {
-            "capacite": 55,
-            "autonomie": 4
-        },
-        "prix": 1500
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 1,
+    "reviews": {
+      "positive": 42,
+      "negative": 2
     },
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 8,
-        "reviews":{
-            "positive": 42,
-            "negative": 2
-        },
-        "marque": "Azuss",
-        "nom": "ZunBook 13",
-        "type": "portables",
-        "ecran": {
-            "taille": 13,
-            "type": "IPS",
-            "dpi": 200
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": true,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "X7 770Y",
-                "score": 7500,
-                "core": 4,
-                "frequence-max": 3600,
-                "tdp": 12
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 1024,
-                "type": "mvne",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "INTELLE",
-                "modele": "HD IRIS",
-                "score": 1500
-            }
-        },
-        "batterie" : {
-            "capacite": 55,
-            "autonomie": 10
-        },
-        "prix": 1200
-    },   
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 9,
-        "reviews":{
-            "positive": 42,
-            "negative": 0
-        },
-        "marque": "Azuss",
-        "nom": "ZunBook 12",
-        "type": "portables",
-        "ecran": {
-            "taille": 12,
-            "type": "IPS",
-            "dpi": 100
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": true,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "X5 550Y",
-                "score": 6500,
-                "core": 4,
-                "frequence-max": 3600,
-                "tdp": 10
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 256,
-                "type": "mvne",
-                "rpm": null,
-                "vitesse-transfert": 3000
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "INTELLE",
-                "modele": "HD IRIS",
-                "score": 1500
-            }
-        },
-        "batterie" : {
-            "capacite": 45,
-            "autonomie": 8
-        },
-        "prix": 900
-    },  
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 10,
-        "reviews":{
-            "positive": 0,
-            "negative": 3
-        },
-        "marque": "Azuss",
-        "nom": "VivaBook 15",
-        "type": "portables",
-        "ecran": {
-            "taille": 15,
-            "type": "TN",
-            "dpi": 72
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": false,
-            "type": "azerty",
-            "pave-num": true
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 16},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "X5 550",
-                "score": 7900,
-                "core": 4,
-                "frequence-max": 3600,
-                "tdp": 25
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 2048,
-                "type": "hdd",
-                "rpm": 7200,
-                "vitesse-transfert": 100
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "INTELLE",
-                "modele": "HD 9000",
-                "score": 395
-            }
-        },
-        "batterie" : {
-            "capacite": 58,
-            "autonomie": 4
-        },
-        "prix": 700
+    "marque": "ASSER",
+    "nom": "Respire TC10",
+    "type": "fixes",
+    "ecran": null,
+    "clavier": null,
+    "system": {
+      "ram": 5657,
+      "cpu": 2319,
+      "hdd": 9431,
+      "cg": 8396
     },
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 11,
-        "reviews":{
-            "positive": 531,
-            "negative": 123
-        },
-        "marque": "Azuss",
-        "nom": "VivaBook 14",
-        "type": "portables",
-        "ecran": {
-            "taille": 14,
-            "type": "TN",
-            "dpi": 90
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": false,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 8},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "X3 300",
-                "score": 5200,
-                "core": 2,
-                "frequence-max": 3400,
-                "tdp": 15
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 512,
-                "type": "ssd",
-                "rpm": null,
-                "vitesse-transfert": 400
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "INTELLE",
-                "modele": "HD 9000",
-                "score": 395
-            }
-        },
-        "batterie" : {
-            "capacite": 45,
-            "autonomie": 4
-        },
-        "prix": 700
+    "batterie": null,
+    "prix": 1000
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 2,
+    "reviews": {
+      "positive": 62,
+      "negative": 21
     },
-    {
-        "typeObjet": "pc",
-        "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
-        "id": 12,
-        "reviews":{
-            "positive": 53,
-            "negative": 15
-        },
-        "marque": "Azuss",
-        "nom": "VivaBook 11",
-        "type": "portables",
-        "ecran": {
-            "taille": 11,
-            "type": "TN",
-            "dpi": 72
-        },
-        "clavier": {
-            "chiclet": true,
-            "retroeclairage": false,
-            "type": "azerty",
-            "pave-num": false
-        },
-        "system": {
-            "ram": {
-                "componentType": "ram",
-                "value": 4},
-            "cpu": {
-                "componentType": "cpu",
-                "marque":"INTELLE",
-                "nom": "ATAUM",
-                "score": 1250,
-                "core": 2,
-                "frequence-max": 1900,
-                "tdp": 5
-            },
-            "hdd": {
-                "componentType":"hdd",
-                "capacite": 256,
-                "type": "mmc",
-                "rpm": null,
-                "vitesse-transfert": 50
-            },
-            "cg": {
-                "componentType": "cg",
-                "marque": "INTELLE",
-                "modele": "HD 9000",
-                "score": 395
-            }
-        },
-        "batterie" : {
-            "capacite": 35,
-            "autonomie": 5
-        },
-        "prix": 400
-    }
+    "marque": "ASSER",
+    "nom": "Respire TC2",
+    "type": "fixes",
+    "ecran": null,
+    "clavier": null,
+    "system": {
+      "ram": 5627,
+      "cpu": 3729,
+      "hdd": 2539,
+      "cg": 5029
+    },
+    "batterie": null,
+    "prix": 300
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 3,
+    "reviews": {
+      "positive": 658,
+      "negative": 53
+    },
+    "marque": "ASSER",
+    "nom": "Respire TC",
+    "type": "fixes",
+    "ecran": null,
+    "clavier": null,
+    "system": {
+      "ram": 2744,
+      "cpu": 3355,
+      "hdd": 8990,
+      "cg": 6477
+    },
+    "batterie": null,
+    "prix": 500
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 13,
+    "reviews": {
+      "positive": 4,
+      "negative": 1000
+    },
+    "marque": "ASSER",
+    "nom": "Swif 15",
+    "type": "portables",
+    "ecran": {
+      "taille": 15,
+      "type": "TN",
+      "dpi": 100
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": true,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 2744,
+      "cpu": 5590,
+      "hdd": 8727,
+      "cg": 4107
+    },
+    "batterie": {
+      "capacite": 55,
+      "autonomie": 6
+    },
+    "prix": 900
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 4,
+    "reviews": {
+      "positive": 420,
+      "negative": 69
+    },
+    "marque": "ASSER",
+    "nom": "Swif 13",
+    "type": "portables",
+    "ecran": {
+      "taille": 13,
+      "type": "IPS",
+      "dpi": 100
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": true,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 616,
+      "cpu": 5590,
+      "hdd": 9431,
+      "cg": 4107
+    },
+    "batterie": {
+      "capacite": 55,
+      "autonomie": 6
+    },
+    "prix": 900
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 5,
+    "reviews": {
+      "positive": 123,
+      "negative": 25
+    },
+    "marque": "ASSER",
+    "nom": "Swif 14",
+    "type": "portables",
+    "ecran": {
+      "taille": 14,
+      "type": "IPS",
+      "dpi": 100
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": false,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 2135,
+      "cpu": 6637,
+      "hdd": 8990,
+      "cg": 5865
+    },
+    "batterie": {
+      "capacite": 55,
+      "autonomie": 4
+    },
+    "prix": 800
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 6,
+    "reviews": {
+      "positive": 333,
+      "negative": 53
+    },
+    "marque": "ROJ",
+    "nom": "Flow Z15",
+    "type": "portables",
+    "ecran": {
+      "taille": 15,
+      "type": "TN",
+      "dpi": 100
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": true,
+      "type": "azerty",
+      "pave-num": true
+    },
+    "system": {
+      "ram": 2744,
+      "cpu": 2564,
+      "hdd": 1358,
+      "cg": 8121
+    },
+    "batterie": {
+      "capacite": 65,
+      "autonomie": 3
+    },
+    "prix": 1700
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 7,
+    "reviews": {
+      "positive": 121,
+      "negative": 22
+    },
+    "marque": "ROJ",
+    "nom": "Flow Z13",
+    "type": "portables",
+    "ecran": {
+      "taille": 13,
+      "type": "TN",
+      "dpi": 100
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": true,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 1587,
+      "cpu": 3290,
+      "hdd": 2539,
+      "cg": 3957
+    },
+    "batterie": {
+      "capacite": 55,
+      "autonomie": 4
+    },
+    "prix": 1500
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 8,
+    "reviews": {
+      "positive": 42,
+      "negative": 2
+    },
+    "marque": "Azuss",
+    "nom": "ZunBook 13",
+    "type": "portables",
+    "ecran": {
+      "taille": 13,
+      "type": "IPS",
+      "dpi": 200
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": true,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 5627,
+      "cpu": 3355,
+      "hdd": 9558,
+      "cg": 2995
+    },
+    "batterie": {
+      "capacite": 55,
+      "autonomie": 10
+    },
+    "prix": 1200
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 9,
+    "reviews": {
+      "positive": 42,
+      "negative": 0
+    },
+    "marque": "Azuss",
+    "nom": "ZunBook 12",
+    "type": "portables",
+    "ecran": {
+      "taille": 12,
+      "type": "IPS",
+      "dpi": 100
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": true,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 1587,
+      "cpu": 2228,
+      "hdd": 9233,
+      "cg": 1955
+    },
+    "batterie": {
+      "capacite": 45,
+      "autonomie": 8
+    },
+    "prix": 900
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 10,
+    "reviews": {
+      "positive": 0,
+      "negative": 3
+    },
+    "marque": "Azuss",
+    "nom": "VivaBook 15",
+    "type": "portables",
+    "ecran": {
+      "taille": 15,
+      "type": "TN",
+      "dpi": 72
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": false,
+      "type": "azerty",
+      "pave-num": true
+    },
+    "system": {
+      "ram": 616,
+      "cpu": 3290,
+      "hdd": 9558,
+      "cg": 1209
+    },
+    "batterie": {
+      "capacite": 58,
+      "autonomie": 4
+    },
+    "prix": 700
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 11,
+    "reviews": {
+      "positive": 531,
+      "negative": 123
+    },
+    "marque": "Azuss",
+    "nom": "VivaBook 14",
+    "type": "portables",
+    "ecran": {
+      "taille": 14,
+      "type": "TN",
+      "dpi": 90
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": false,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 616,
+      "cpu": 3290,
+      "hdd": 1208,
+      "cg": 3957
+    },
+    "batterie": {
+      "capacite": 45,
+      "autonomie": 4
+    },
+    "prix": 700
+  },
+  {
+    "typeObjet": "pc",
+    "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
+    "id": 12,
+    "reviews": {
+      "positive": 53,
+      "negative": 15
+    },
+    "marque": "Azuss",
+    "nom": "VivaBook 11",
+    "type": "portables",
+    "ecran": {
+      "taille": 11,
+      "type": "TN",
+      "dpi": 72
+    },
+    "clavier": {
+      "chiclet": true,
+      "retroeclairage": false,
+      "type": "azerty",
+      "pave-num": false
+    },
+    "system": {
+      "ram": 5627,
+      "cpu": 2393,
+      "hdd": 1208,
+      "cg": 7135
+    },
+    "batterie": {
+      "capacite": 35,
+      "autonomie": 5
+    },
+    "prix": 400
+  }
 ]

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data/data.service';
@@ -14,9 +15,10 @@ export class ProductPageComponent implements OnInit {
   data: any;
   filledStars: any;
   shallowStars: any;
+  public dataService: DataService;
 
-
-  constructor(private route: ActivatedRoute, private dataService: DataService, private router: Router, private panierService: PanierService) { 
+  constructor(private route: ActivatedRoute, private dataS: DataService, private router: Router, private panierService: PanierService) { 
+    this.dataService = dataS;
   }
   
   ngOnInit(): void {

@@ -1,1 +1,509 @@
-[{"typeObjet": "composant", "marque":"NVADIA","modele":"RTZ 3080","score":20000,"composant":"cg","id":1000},{"typeObjet": "composant", "capacite":3840,"type":"nvme","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1001},{"typeObjet": "composant", "marque":"INTELLE","nom":"X9 900","score":25000,"core":2,"frequence-max":5900,"tdp":125,"composant":"cpu","id":1002},{"typeObjet": "composant", "marque":"NVADIA","modele":"RTZ 3030","score":4000,"composant":"cg","id":1003},{"typeObjet": "composant", "capacite":1024,"type":"nvme","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1004},{"typeObjet": "composant", "marque":"INTELLE","nom":"X3 300","score":12000,"core":2,"frequence-max":4200,"tdp":65,"composant":"cpu","id":1005},{"typeObjet": "composant", "marque":"NVADIA","modele":"RTZ 3050","score":6500,"composant":"cg","id":1006},{"typeObjet": "composant", "capacite":1024,"type":"nvme","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1007},{"typeObjet": "composant", "marque":"AMDé","nom":"B5 5000","score":15000,"core":6,"frequence-max":4200,"tdp":65,"composant":"cpu","id":1008},{"typeObjet": "composant", "marque":"NVADIA","modele":"mtx 350","score":4000,"composant":"cg","id":1009},{"typeObjet": "composant", "capacite":1024,"type":"nvme","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1010},{"typeObjet": "composant", "marque":"AMDé","nom":"B5 550","score":12000,"core":6,"frequence-max":4200,"tdp":25,"composant":"cpu","id":1011},{"typeObjet": "composant", "marque":"NVADIA","modele":"mtx 350","score":4000,"composant":"cg","id":1012},{"typeObjet": "composant", "capacite":1024,"type":"nvme","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1013},{"typeObjet": "composant", "marque":"AMDé","nom":"B5 550","score":12000,"core":6,"frequence-max":4200,"tdp":25,"composant":"cpu","id":1014},{"typeObjet": "composant", "marque":"NVADIA","modele":"RTZ 3050","score":6500,"composant":"cg","id":1015},{"typeObjet": "composant", "capacite":1024,"type":"ssd","rpm":null,"vitesse-transfert":300,"composant":"hdd","id":1016},{"typeObjet": "composant", "marque":"AMDé","nom":"B3 500","score":7000,"core":4,"frequence-max":4000,"tdp":15,"composant":"cpu","id":1017},{"typeObjet": "composant", "marque":"NVADIA","modele":"RTZ 3080","score":20000,"composant":"cg","id":1018},{"typeObjet": "composant", "capacite":3840,"type":"mvne","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1019},{"typeObjet": "composant", "marque":"AMDé","nom":"B9 5000","score":20000,"core":10,"frequence-max":4400,"tdp":45,"composant":"cpu","id":1020},{"typeObjet": "composant", "marque":"NVADIA","modele":"RTZ 3060","score":12000,"composant":"cg","id":1021},{"typeObjet": "composant", "capacite":2048,"type":"mvne","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1022},{"typeObjet": "composant", "marque":"AMDé","nom":"B7 5000","score":17000,"core":8,"frequence-max":4400,"tdp":45,"composant":"cpu","id":1023},{"typeObjet": "composant", "marque":"INTELLE","modele":"HD IRIS","score":1500,"composant":"cg","id":1024},{"typeObjet": "composant", "capacite":1024,"type":"mvne","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1025},{"typeObjet": "composant", "marque":"INTELLE","nom":"X7 770Y","score":7500,"core":4,"frequence-max":3600,"tdp":12,"composant":"cpu","id":1026},{"typeObjet": "composant", "marque":"INTELLE","modele":"HD IRIS","score":1500,"composant":"cg","id":1027},{"typeObjet": "composant", "capacite":256,"type":"mvne","rpm":null,"vitesse-transfert":3000,"composant":"hdd","id":1028},{"typeObjet": "composant", "marque":"INTELLE","nom":"X5 550Y","score":6500,"core":4,"frequence-max":3600,"tdp":10,"composant":"cpu","id":1029},{"typeObjet": "composant", "marque":"INTELLE","modele":"HD 9000","score":395,"composant":"cg","id":1030},{"typeObjet": "composant", "capacite":2048,"type":"hdd","rpm":7200,"vitesse-transfert":100,"composant":"hdd","id":1031},{"typeObjet": "composant", "marque":"INTELLE","nom":"X5 550","score":7900,"core":4,"frequence-max":3600,"tdp":25,"composant":"cpu","id":1032},{"typeObjet": "composant", "marque":"INTELLE","modele":"HD 9000","score":395,"composant":"cg","id":1033},{"typeObjet": "composant", "capacite":512,"type":"ssd","rpm":null,"vitesse-transfert":400,"composant":"hdd","id":1034},{"typeObjet": "composant", "marque":"INTELLE","nom":"X3 300","score":5200,"core":2,"frequence-max":3400,"tdp":15,"composant":"cpu","id":1035},{"typeObjet": "composant", "marque":"INTELLE","modele":"HD 9000","score":395,"composant":"cg","id":1036},{"typeObjet": "composant", "capacite":256,"type":"mmc","rpm":null,"vitesse-transfert":50,"composant":"hdd","id":1037},{"typeObjet": "composant", "marque":"INTELLE","nom":"ATAUM","score":1250,"core":2,"frequence-max":1900,"tdp":5,"composant":"cpu","id":1038}]
+[
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "RTZ 3080",
+    "score": 20000,
+    "composant": "cg",
+    "prix": "371.46",
+    "id": 2995
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 3840,
+    "storageType": "nvme",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "338.74",
+    "id": 5944
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "X9 900",
+    "score": 25000,
+    "core": 2,
+    "frequence-max": 5900,
+    "tdp": 125,
+    "composant": "cpu",
+    "prix": "385.44",
+    "id": 2319
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "RTZ 3030",
+    "score": 4000,
+    "composant": "cg",
+    "prix": "579.99",
+    "id": 6477
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 1024,
+    "storageType": "nvme",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "374.68",
+    "id": 2539
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "X3 300",
+    "score": 12000,
+    "core": 2,
+    "frequence-max": 4200,
+    "tdp": 65,
+    "composant": "cpu",
+    "prix": "567.02",
+    "id": 8651
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "RTZ 3050",
+    "score": 6500,
+    "composant": "cg",
+    "prix": "463.37",
+    "id": 1955
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 1024,
+    "storageType": "nvme",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "563.96",
+    "id": 8727
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "AMDé",
+    "nom": "B5 5000",
+    "score": 15000,
+    "core": 6,
+    "frequence-max": 4200,
+    "tdp": 65,
+    "composant": "cpu",
+    "prix": "453.17",
+    "id": 5590
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "mtx 350",
+    "score": 4000,
+    "composant": "cg",
+    "prix": "494.99",
+    "id": 3957
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 1024,
+    "storageType": "nvme",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "302.73",
+    "id": 2467
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "AMDé",
+    "nom": "B5 550",
+    "score": 12000,
+    "core": 6,
+    "frequence-max": 4200,
+    "tdp": 25,
+    "composant": "cpu",
+    "prix": "344.82",
+    "id": 2506
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "mtx 350",
+    "score": 4000,
+    "composant": "cg",
+    "prix": "530.78",
+    "id": 5224
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 1024,
+    "storageType": "nvme",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "400.06",
+    "id": 9233
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "AMDé",
+    "nom": "B5 550",
+    "score": 12000,
+    "core": 6,
+    "frequence-max": 4200,
+    "tdp": 25,
+    "composant": "cpu",
+    "prix": "189.97",
+    "id": 2228
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "RTZ 3050",
+    "score": 6500,
+    "composant": "cg",
+    "prix": "173.06",
+    "id": 7135
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 1024,
+    "storageType": "ssd",
+    "vitesse-transfert": 300,
+    "composant": "hdd",
+    "prix": "356.92",
+    "id": 1517
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "AMDé",
+    "nom": "B3 500",
+    "score": 7000,
+    "core": 4,
+    "frequence-max": 4000,
+    "tdp": 15,
+    "composant": "cpu",
+    "prix": "527.47",
+    "id": 3475
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "RTZ 3080",
+    "score": 20000,
+    "composant": "cg",
+    "prix": "525.27",
+    "id": 8121
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 3840,
+    "storageType": "mvne",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "479.67",
+    "id": 9558
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "AMDé",
+    "nom": "B9 5000",
+    "score": 20000,
+    "core": 10,
+    "frequence-max": 4400,
+    "tdp": 45,
+    "composant": "cpu",
+    "prix": "366.73",
+    "id": 2564
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "NVADIA",
+    "modele": "RTZ 3060",
+    "score": 12000,
+    "composant": "cg",
+    "prix": "484.12",
+    "id": 4107
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 2048,
+    "storageType": "mvne",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "360.07",
+    "id": 1208
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "AMDé",
+    "nom": "B7 5000",
+    "score": 17000,
+    "core": 8,
+    "frequence-max": 4400,
+    "tdp": 45,
+    "composant": "cpu",
+    "prix": "130.71",
+    "id": 3355
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "modele": "HD IRIS",
+    "score": 1500,
+    "composant": "cg",
+    "prix": "257.01",
+    "id": 8396
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 1024,
+    "storageType": "mvne",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "110.77",
+    "id": 8990
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "X7 770Y",
+    "score": 7500,
+    "core": 4,
+    "frequence-max": 3600,
+    "tdp": 12,
+    "composant": "cpu",
+    "prix": "479.22",
+    "id": 3729
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "modele": "HD IRIS",
+    "score": 1500,
+    "composant": "cg",
+    "prix": "133.26",
+    "id": 5029
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 256,
+    "storageType": "mvne",
+    "vitesse-transfert": 3000,
+    "composant": "hdd",
+    "prix": "560.18",
+    "id": 60
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "X5 550Y",
+    "score": 6500,
+    "core": 4,
+    "frequence-max": 3600,
+    "tdp": 10,
+    "composant": "cpu",
+    "prix": "255.15",
+    "id": 6637
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "modele": "HD 9000",
+    "score": 395,
+    "composant": "cg",
+    "prix": "362.79",
+    "id": 1209
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 2048,
+    "storageType": "hdd",
+    "vitesse-transfert": 100,
+    "composant": "hdd",
+    "prix": "122.91",
+    "id": 7149
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "X5 550",
+    "score": 7900,
+    "core": 4,
+    "frequence-max": 3600,
+    "tdp": 25,
+    "composant": "cpu",
+    "prix": "470.77",
+    "id": 3290
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "modele": "HD 9000",
+    "score": 395,
+    "composant": "cg",
+    "prix": "155.64",
+    "id": 5865
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 512,
+    "storageType": "ssd",
+    "vitesse-transfert": 400,
+    "composant": "hdd",
+    "prix": "185.45",
+    "id": 9431
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "X3 300",
+    "score": 5200,
+    "core": 2,
+    "frequence-max": 3400,
+    "tdp": 15,
+    "composant": "cpu",
+    "prix": "234.98",
+    "id": 2393
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "modele": "HD 9000",
+    "score": 395,
+    "composant": "cg",
+    "prix": "541.76",
+    "id": 301
+  },
+  {
+    "typeObjet": "composant",
+    "capacite": 256,
+    "storageType": "mmc",
+    "vitesse-transfert": 50,
+    "composant": "hdd",
+    "prix": "495.16",
+    "id": 1358
+  },
+  {
+    "typeObjet": "composant",
+    "marque": "INTELLE",
+    "nom": "ATAUM",
+    "score": 1250,
+    "core": 2,
+    "frequence-max": 1900,
+    "tdp": 5,
+    "composant": "cpu",
+    "prix": "206.45",
+    "id": 3133
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Corset",
+    "prix": "554.31",
+    "frequence": "DDR3 1033MHz",
+    "quantite": 8,
+    "id": 2135
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Queenston",
+    "prix": "287.31",
+    "frequence": "DDR4 1800MHz",
+    "quantite": 32,
+    "id": 6503
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Corset",
+    "prix": "183.45",
+    "frequence": "DDR4 1600MHz",
+    "quantite": 16,
+    "id": 2242
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Cuissial",
+    "prix": "151.23",
+    "frequence": "DDR4 1600MHz",
+    "quantite": 8,
+    "id": 9513
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Queenston",
+    "prix": "573.82",
+    "frequence": "DDR3 1033MHz",
+    "quantite": 16,
+    "id": 2744
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Queenston",
+    "prix": "440.51",
+    "frequence": "DDR4 1600MHz",
+    "quantite": 16,
+    "id": 1587
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "G.Skull",
+    "prix": "456.05",
+    "frequence": "DDR4 1800MHz",
+    "quantite": 8,
+    "id": 616
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Cuissial",
+    "prix": "547.01",
+    "frequence": "DDR3 1033MHz",
+    "quantite": 8,
+    "id": 6556
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "G.Skull",
+    "prix": "564.99",
+    "frequence": "DDR5 3200MHz",
+    "quantite": 32,
+    "id": 5627
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Queenston",
+    "prix": "295.54",
+    "frequence": "DDR5 3200MHz",
+    "quantite": 64,
+    "id": 5657
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Queenston",
+    "prix": "360.43",
+    "frequence": "DDR4 1600MHz",
+    "quantite": 8,
+    "id": 5559
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "G.Skull",
+    "prix": "481.83",
+    "frequence": "DDR5 3200MHz",
+    "quantite": 8,
+    "id": 9774
+  },
+  {
+    "typeObjet": "composant",
+    "composant": "ram",
+    "marque": "Corset",
+    "prix": "126.70",
+    "frequence": "DDR4 1800MHz",
+    "quantite": 32,
+    "id": 1295
+  }
+]

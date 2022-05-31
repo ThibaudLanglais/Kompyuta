@@ -39,6 +39,11 @@ export class DataService {
   getPcFromId(id: number): any{
     return this.dataValue.pcs.filter((el: any) => el.id == id)[0];
   }
+  
+  getComponentById(id: number): any{
+    return this.dataValue.components.filter((el: any) => el.id == id)[0];
+  }
+
 
   getItemsByCat(cat: string): any[]{
     if(cat == 'composants'){
@@ -69,6 +74,15 @@ export class DataService {
       pagesTmp.push(tmp);
     }
     return pagesTmp;
+  }
+
+  getTotalPrice(pc: any): number{
+    var price = 0;
+    this.dataFetched && Object.keys(pc.system).forEach(key =>{
+      var tmp = this.getComponentById(pc.system[key])
+      price += parseFloat(tmp.prix)
+    })
+    return price
   }
 
   addImages(array: any[]): any[]{

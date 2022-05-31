@@ -59,42 +59,36 @@
     <ul>
       <li>
         <img src="../../assets/ram.png" alt="Ram" />
-        <p>
-          Corsair Value Select {{ data.system.ram }} Go (2x{{
-            data.system.ram / 2
-          }}
-          Go) DDR3 1600 MHz CL11
+        <p *ngLet="dataService.getComponentById(data.system.ram) as ramData">
+          {{ ramData.marque }}
+          {{ ramData.frequence }}
+          2*{{ ramData.quantite }}Go
         </p>
       </li>
       <li>
         <img src="../../assets/ssd.png" alt="Storage" />
-        <p>
-          {{ data.system.hdd.type }} {{ data.system.hdd.capacite }}Go ({{
-            data.system.hdd["vitesse-transfert"]
-          }}MB/s)
+        <p *ngLet="dataService.getComponentById(data.system.hdd) as hddData">
+          {{ hddData.type }}
+          {{ hddData.capacite }}Go ({{ hddData["vitesse-transfert"] }}MB/s)
         </p>
       </li>
       <li>
         <img src="../../assets/gpu.png" alt="GPU" />
-        <p>{{ data.system.cg.marque + " " + data.system.cg.modele }}</p>
+        <p *ngLet="dataService.getComponentById(data.system.cg) as cgData">
+          {{ cgData.marque }} {{ cgData.modele }}
+        </p>
       </li>
       <li>
         <img src="../../assets/cpu.png" alt="CPU" />
-        <p>
-          {{
-            data.system.cpu.marque +
-              " " +
-              data.system.cpu.nom +
-              " (" +
-              data.system.cpu.core +
-              " coeurs / " +
-              data.system.cpu["frequence-max"] / 1000 +
-              "GHz)"
-          }}
+        <p *ngLet="dataService.getComponentById(data.system.cpu) as cpuData">
+          {{ cpuData.marque }}
+          {{ cpuData.nom }} ({{ cpuData.core }} coeurs /
+          {{ cpuData["frequence-max"] / 1000 }}GHz)
         </p>
       </li>
     </ul>
     <app-text-icon-button
+      (click)="navigateConfigurateur()"
       text="Éditer"
       image="<i class='fa-solid fa-pen'></i>"
     ></app-text-icon-button>

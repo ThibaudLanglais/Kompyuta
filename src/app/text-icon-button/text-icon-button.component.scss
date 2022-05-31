@@ -8,10 +8,14 @@ button{
    gap: 10px;
    cursor: pointer;
    margin: 10px 0;
+   transition: filter 0.2s;
    &.iconOnly{
       padding: 0;
       height: 40px;
       width: 40px;
+   }
+   &:hover{
+      filter: brightness(1.1);
    }
 }
 

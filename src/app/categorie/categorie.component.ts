@@ -57,15 +57,13 @@ export class CategorieComponent implements OnInit {
   }
 
   initForm(val: any){
-    if(val.slug != 'composants'){
-      var tmpMin: any, tmpMax: any;
-      this.data.forEach(el=>{
-        if(!tmpMin || tmpMin > el.prix) tmpMin = el.prix
-        if(!tmpMax || tmpMax < el.prix) tmpMax = el.prix
-        this.priceMax = tmpMax
-        this.priceMin = tmpMin
-      })
-    }
+    var tmpMin: any, tmpMax: any;
+    this.data.forEach(el=>{
+      if(!tmpMin || tmpMin > el.prix) tmpMin = el.prix
+      if(!tmpMax || tmpMax < el.prix) tmpMax = el.prix
+      this.priceMax = tmpMax
+      this.priceMin = tmpMin
+    })
   }
 
   onFiltersSubmit(){

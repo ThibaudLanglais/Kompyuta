@@ -1,18 +1,28 @@
-<div class="item">
+<div class="item" *ngIf="item">
   <img
     *ngIf="item.images"
     src="../../assets/images_ordis/{{ item.images[0] }}"
     alt="Image du produit"
   />
+  <img
+    *ngIf="configurateur && (item.componentType || item.composant)"
+    src="../../assets/{{ item.componentType || item.composant }}.png"
+    alt="Type du composant"
+  />
   <div class="item_title_container">
     <p class="item_title">
-      {{ item.marque || (item.value && "RAM " + item.value + "GB") || (item.type && item.type + " " + item.capacite + "GB") }}
-      {{ item.nom || item.modele || item.composant }}
+      {{ item.marque ? item.marque : "" }}
+      {{ item.nom ? item.nom : "" }}
+      {{ item.modele ? item.modele : "" }}
+      {{ item.quantite ? "2x" + item.quantite + "Go" : "" }}
+      {{ item.frequence ? item.frequence : "" }}
+      {{ item.storageType ? item.storageType : "" }}
+      {{ item.capacite ? item.capacite + "GB" : "" }}
     </p>
     <p *ngIf="item.custom" class="custom">Personnalisé</p>
   </div>
   <p *ngIf="item.prix" class="item_price">{{ item.prix }}€</p>
-  <div *ngIf="item.typeObjet != 'composant'" class="actions">
+  <div *ngIf="item.typeObjet != 'composant' || configurateur" class="actions">
     <app-text-icon-button
       *ngIf="trash && index != undefined && !configurateur"
       (click)="deleteFromPanier(index)"

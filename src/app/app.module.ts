@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PagePanierComponent } from './page-panier/page-panier.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PageSearchComponent } from './page-search/page-search.component';
+import { NgLetDirective } from './directives/ng-let/ng-let.directive';
+import localeFr from '@angular/common/locales/fr';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import { PageSearchComponent } from './page-search/page-search.component';
     SearchItemComponent,
     PagePanierComponent,
     PageNotFoundComponent,
-    PageSearchComponent
+    PageSearchComponent,
+    NgLetDirective
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,11 @@ import { PageSearchComponent } from './page-search/page-search.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID, useValue: "fr-FR"
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

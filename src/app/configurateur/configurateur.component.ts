@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../services/data/data.service';
+import { PanierService } from '../services/panier/panier.service';
 
 @Component({
   selector: 'app-configurateur',
@@ -13,10 +14,16 @@ export class ConfigurateurComponent implements OnInit {
   pcSystemKeys: any[] = [];
   components: any[] = [];
   filteredComponents: any[] = [];
+  modalOpened: boolean = false;
+  currentComponent: string = '';
+  public dataService: DataService;
 
-  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private ds: DataService, private panier: PanierService) {
+    this.dataService = ds;
+  }
 
   ngOnInit() {
+    this.dataService.getComponents();
     this.dataService.dataSubscription().subscribe((dataService: any) => this.components = dataService.components);
     this.route.queryParams
       .subscribe(params => {
@@ -42,7 +49,24 @@ export class ConfigurateurComponent implements OnInit {
     }
   }
 
-  handleEditClick(data: string){
-    console.log(data);
+  onSelectItemClick(componentId: number){
+    this.currentPcData.system[this.currentComponent] = componentId;
+    this.pcSystemKeys = [...this.pcSystemKeys];
+    this.modalOpened = false;
+  }
+
+  onCloseModalClick(){
+    this.modalOpened = false;
+  }
+
+  handleEditClick(componentType: string){
+    this.currentComponent = componentType
+    this.modalOpened = true;
+    this.filteredComponents = this.components.filter((c:any) => c.composant == componentType)
+  }
+
+  onConfirmPcClick(){
+    this.currentPcData.custom = true;
+    this.panier.addPanier(this.currentPcData)
   }
 }
