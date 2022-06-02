@@ -23,4 +23,16 @@
   <body>
     <app-root></app-root>
   </body>
+  <script>
+    var secret = "bonus3000";
+    var index = 0;
+    window.addEventListener("keydown", (e) => {
+      if (e.key.toLowerCase() == secret[index]) index++;
+      else index = 0;
+      if (index == secret.length) {
+        document.body.classList.toggle("secret3000");
+        index = 0;
+      }
+    });
+  </script>
 </html>
