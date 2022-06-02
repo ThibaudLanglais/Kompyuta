@@ -30,7 +30,7 @@
             >({{ data.reviews.positive + data.reviews.negative }} avis)</span
           >
         </div>
-        <h2 class="price">{{ data.prix }}€</h2>
+        <h2 class="price">{{ dataService.getTotalPrice(data) }}€</h2>
         <p class="desc">{{ data.description }}</p>
         <div class="actions">
           <app-text-icon-button

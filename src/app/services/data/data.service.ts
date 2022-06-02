@@ -61,11 +61,25 @@ export class DataService {
     return this.dataState.asObservable();
   }
 
-  searchItems(params: string[], perPage?: number): any[]{
+  searchItems(params: any, perPage?: number): any[]{
     var pagesTmp = [], tmp: any[] = [];
-    params.forEach(param=>{
-      tmp = this.dataValue.pcs.concat(this.dataValue.components).filter((el: any) => JSON.stringify(el).toLowerCase().indexOf(param.toLowerCase()) != -1)
-    })
+    if(params.query != null){
+      params.query.split(' ').forEach((param: string)=>{
+        tmp = this.dataValue.pcs.concat(this.dataValue.components).filter((el: any) => JSON.stringify(el).toLowerCase().indexOf(param.toLowerCase()) != -1)
+      })
+    }else if(params.tags != null){
+      var tags = JSON.parse(params.tags);
+      console.log(tags);
+      tmp = this.dataValue.pcs.filter((el: any) => {
+        var counter = 0;
+        if(el.tags) console.log(el.tags);
+        Object.keys(tags).forEach((key: string) => {
+          if(el.tags?.includes(tags[key])) counter++;
+        })
+        // Si plus de 50% des tags correspondent, on renvoie le produit
+        return counter/tags.length > 0.5;
+      })
+    }
     if(perPage && perPage != -1){
       for (let i = 0; i < tmp.length; i += perPage) {
         pagesTmp.push(tmp.slice(i, i + perPage));
@@ -90,9 +104,8 @@ export class DataService {
     array.forEach((el:any) => {
       if(el.typeObjet == 'pc'){
         el.images = []
-        el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}.jpg`)
-        for (let i = 2; i < 4; i++) {
-          el.images.push(`${el.marque.toLowerCase()}_${el.nom.toLowerCase()}_${i}.jpg`)
+        for (let i = 0; i < 3; i++) {
+          el.images.push(`${el.id}_${i}.jpg`)
         }
         res.push(el)
       }

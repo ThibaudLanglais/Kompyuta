@@ -10,7 +10,7 @@ import { DataService } from '../services/data/data.service';
 })
 export class PageSearchComponent implements OnInit {
 
-  query: string = '';
+  query: {} = {};
   data: any[] = [];
   filteredData: any[] = [];
   pages: any[] = [];
@@ -23,8 +23,9 @@ export class PageSearchComponent implements OnInit {
     this.initData(this.dataService.dataValue);
     this.dataService.dataSubscription().subscribe((serviceData: any) => this.initData(serviceData));
     this.route.queryParams
-      .subscribe(params => {
-        this.query = params['query'];
+      .subscribe((params: {}) => {
+        // this.query = params['query'];
+        this.query = params;
         this.onParamsChange();
       }
     );
@@ -39,7 +40,8 @@ export class PageSearchComponent implements OnInit {
   }
 
   onParamsChange(){
-    this.pages = this.dataService.searchItems(this.query.split(' '), parseInt(this.perPage.value));
+    // this.pages = this.dataService.searchItems(this.query.split(' '), parseInt(this.perPage.value));
+    this.pages = this.dataService.searchItems(this.query, parseInt(this.perPage.value));
     this.pageIndex = 0;
   }
 

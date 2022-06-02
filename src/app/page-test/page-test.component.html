@@ -31,8 +31,9 @@
               name="quiz"
               id="{{ indexOfelement }}"
               value="{{ indexOfelement }}"
+              [checked]="currentAnswer === answer.value"
             />
-            <label for="{{ indexOfelement }}">{{ answer.ans }}</label>
+            <label for="{{ indexOfelement }}">{{ answer.ans }} </label>
           </div>
         </div>
         <p *ngIf="currentQuestion.message">{{ currentQuestion.message }}</p>

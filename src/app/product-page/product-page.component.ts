@@ -40,8 +40,6 @@ export class ProductPageComponent implements OnInit {
     }
     else if(this.dataService.dataFetched) {
       this.router.navigate([''])
-      console.log("redirecting");
-      
     }
   }
 

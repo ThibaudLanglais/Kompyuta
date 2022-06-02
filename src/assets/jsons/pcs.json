@@ -3,6 +3,15 @@
     "typeObjet": "pc",
     "description": "Affichant un design fin et épuré, cet ordinateur est conçu pour endurer tout votre travail multitâche, offrir des performances extrêmes et stimuler votre créativité à chaque instant.",
     "id": 1,
+    "tags": [
+      "mid",
+      "gaming",
+      "streaming",
+      "fixe",
+      "macOS",
+      "500Gb",
+      "500-700"
+    ],
     "reviews": {
       "positive": 42,
       "negative": 2
