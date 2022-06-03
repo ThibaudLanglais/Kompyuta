@@ -96,9 +96,10 @@
   <section class="articles_similaires">
     <h3 class="bold_title">Articles similaires</h3>
     <div class="carousel">
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+      <app-card
+        *ngFor="let item of dataService.getSimilarProducts(data)"
+        [data]="item"
+      ></app-card>
     </div>
   </section>
 </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
+import { Data, Pc, QueryParams, ComponentInterface } from '../../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +11,14 @@ export class DataService {
   dataState = new Subject<Data>();
   dataValue: Data = {components: [], pcs: []};
   dataFetched: boolean = false;
-
   componentsObservable: Observable<any> = new Observable();
-  pcsObservable: Observable<any> = new Observable();
+  pcsObservable: Observable<Pc[]> = new Observable();
 
   constructor(private http: HttpClient) { 
     this.getComponents();
     this.getPcs();
   }
 
-  //Pas d'unsubscribe car https://stackoverflow.com/questions/38008334/angular-rxjs-when-should-i-unsubscribe-from-subscription
   getComponents(): void{
     this.http.get('../../assets/jsons/components.json').subscribe((val: any) => {
       this.dataValue.components = val;
@@ -36,20 +35,20 @@ export class DataService {
     });
   }
 
-  getPcFromId(id: number): any{
-    return this.dataValue.pcs.filter((el: any) => el.id == id)[0];
+  getPcFromId(id: number): Pc | null{
+    return this.dataValue.pcs.filter((el: Pc) => el.id == id)[0];
   }
   
-  getComponentById(id: number): any{
-    return this.dataValue.components.filter((el: any) => el.id == id)[0];
+  getComponentById(id: number): ComponentInterface | null{
+    return this.dataValue.components.filter((el: ComponentInterface) => el.id == id)[0];
   }
 
 
-  getItemsByCat(cat: string): any[]{
+  getItemsByCat(cat: string): (Pc|ComponentInterface)[]{
     if(cat == 'composants'){
       return this.dataValue.components;
     }else{
-      return this.dataValue.pcs.filter((pc: any) => pc.type == cat);
+      return this.dataValue.pcs.filter((pc: Pc) => pc.type == cat);
     }
   }
 
@@ -61,23 +60,23 @@ export class DataService {
     return this.dataState.asObservable();
   }
 
-  searchItems(params: any, perPage?: number): any[]{
-    var pagesTmp = [], tmp: any[] = [];
+  searchItems(params: QueryParams, perPage?: number): (Pc|ComponentInterface)[][]{
+    var pagesTmp: (Pc|ComponentInterface)[][] = [], tmp: (Pc|ComponentInterface)[] = [];
     if(params.query != null){
       params.query.split(' ').forEach((param: string)=>{
-        tmp = this.dataValue.pcs.concat(this.dataValue.components).filter((el: any) => JSON.stringify(el).toLowerCase().indexOf(param.toLowerCase()) != -1)
+        tmp = this.dataValue.pcs;
+        tmp = tmp.concat(this.dataValue.components);
+        tmp = tmp.filter((el: ComponentInterface|Pc) => JSON.stringify(el).toLowerCase().indexOf(param.toLowerCase()) != -1)
       })
     }else if(params.tags != null){
       var tags = JSON.parse(params.tags);
-      console.log(tags);
-      tmp = this.dataValue.pcs.filter((el: any) => {
+      tmp = this.dataValue.pcs.filter((el: Pc) => {
         var counter = 0;
-        if(el.tags) console.log(el.tags);
         Object.keys(tags).forEach((key: string) => {
           if(el.tags?.includes(tags[key])) counter++;
         })
         // Si plus de 50% des tags correspondent, on renvoie le produit
-        return counter/tags.length > 0.5;
+        return counter/Object.keys(tags).length > 0.5;
       })
     }
     if(perPage && perPage != -1){
@@ -90,18 +89,22 @@ export class DataService {
     return pagesTmp;
   }
 
-  getTotalPrice(pc: any): number{
+  getTotalPrice(pc: Pc): number{
     var price = 0;
-    this.dataFetched && Object.keys(pc.system).forEach(key =>{
-      var tmp = this.getComponentById(pc.system[key])
-      price += parseFloat(tmp.prix)
+    this.dataFetched && Object.keys(pc.system).forEach((key: any) =>{
+      var tmp: ComponentInterface|null = this.getComponentById(pc.system[key as keyof typeof pc.system])
+      if(tmp) price += parseFloat(tmp.prix.toString())
     })
-    return price
+    return parseFloat(price.toFixed(2))
   }
 
-  addImages(array: any[]): any[]{
-    var res: any[] = []
-    array.forEach((el:any) => {
+  getSimilarProducts(pc: Pc): Pc[]{
+    return this.dataValue.pcs.filter(el => el.id != pc.id && el.type == pc.type && el.tags?.filter((value: string) => pc.tags?.includes(value)).length >= 3)
+  }
+
+  addImages(array: Pc[]): Pc[]{
+    var res: Pc[] = []
+    array.forEach((el:Pc) => {
       if(el.typeObjet == 'pc'){
         el.images = []
         for (let i = 0; i < 3; i++) {
@@ -112,10 +115,4 @@ export class DataService {
     });
     return res.length > 0 ? res : array;
   }
-}
-
-
-interface Data {
-  pcs: any[],
-  components: any[]
 }

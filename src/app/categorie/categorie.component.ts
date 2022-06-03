@@ -45,8 +45,6 @@ export class CategorieComponent implements OnInit {
     this.route.params.subscribe((val: any)=>{
       this.title = this.categoriesTable[val.slug].title;
       this.subtitle = this.categoriesTable[val.slug].subtitle;
-      //Get the data
-
       this.data = this.filteredData = this.dataService.getItemsByCat(val.slug);
       this.initForm(val);
       this.dataService.dataSubscription().subscribe((serviceData: any) => {

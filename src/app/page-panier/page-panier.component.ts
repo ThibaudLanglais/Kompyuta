@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pc } from '../interfaces/interfaces';
 import { PanierService } from '../services/panier/panier.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { PanierService } from '../services/panier/panier.service';
 })
 export class PagePanierComponent implements OnInit {
 
-  data: any[] = [];
+  data: Pc[] = [];
 
   constructor(private panierService: PanierService) { }
 

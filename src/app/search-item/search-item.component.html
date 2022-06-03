@@ -21,7 +21,19 @@
     </p>
     <p *ngIf="item.custom" class="custom">Personnalisé</p>
   </div>
-  <p *ngIf="item.prix" class="item_price">{{ item.prix }}€</p>
+  <p
+    *ngIf="item.prix"
+    class="item_price"
+    [ngClass]="{ bonus3000: item.bonus3000 }"
+  >
+    {{
+      item.bonus3000
+        ? "3000.00"
+        : item.typeObjet == "composant"
+        ? item.prix
+        : dataService.getTotalPrice(item)
+    }}€
+  </p>
   <div *ngIf="item.typeObjet != 'composant' || configurateur" class="actions">
     <app-text-icon-button
       *ngIf="trash && index != undefined && !configurateur"

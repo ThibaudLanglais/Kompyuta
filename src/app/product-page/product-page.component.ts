@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Pc } from '../interfaces/interfaces';
 import { DataService } from '../services/data/data.service';
 import { PanierService } from '../services/panier/panier.service';
 
@@ -12,9 +13,9 @@ import { PanierService } from '../services/panier/panier.service';
 export class ProductPageComponent implements OnInit {
 
   currentImageIndex: number = 0;
-  data: any;
-  filledStars: any;
-  shallowStars: any;
+  data: Pc | null = null;
+  filledStars: Array<number> = [];
+  shallowStars: Array<number> = [];
   public dataService: DataService;
 
   constructor(private route: ActivatedRoute, private dataS: DataService, private router: Router, private panierService: PanierService) { 

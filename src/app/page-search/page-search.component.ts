@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { ComponentInterface, Data, Pc } from '../interfaces/interfaces';
 import { DataService } from '../services/data/data.service';
 
 @Component({
@@ -11,36 +12,36 @@ import { DataService } from '../services/data/data.service';
 export class PageSearchComponent implements OnInit {
 
   query: {} = {};
-  data: any[] = [];
-  filteredData: any[] = [];
-  pages: any[] = [];
+  data: (Pc|ComponentInterface)[] = [];
+  filteredData: (Pc|ComponentInterface)[] = [];
+  pages:  (Pc|ComponentInterface)[][] = [];
   pageIndex: number = 0;
   perPage: FormControl = new FormControl('5');
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+  constructor(private route: ActivatedRoute, private dataService: DataService) {
+  }
 
   ngOnInit() {
     this.initData(this.dataService.dataValue);
-    this.dataService.dataSubscription().subscribe((serviceData: any) => this.initData(serviceData));
+    this.dataService.dataSubscription().subscribe((serviceData: Data) => this.initData(serviceData));
     this.route.queryParams
       .subscribe((params: {}) => {
-        // this.query = params['query'];
         this.query = params;
         this.onParamsChange();
       }
     );
   }
 
-  initData(val: any){
+  initData(val: Data){
     if(val){
-      this.data = val.components.concat(val.pcs);
+      this.data = val.components;
+      this.data = this.data.concat(val.pcs);
       this.filteredData = this.data
       this.onParamsChange()
     }
   }
 
   onParamsChange(){
-    // this.pages = this.dataService.searchItems(this.query.split(' '), parseInt(this.perPage.value));
     this.pages = this.dataService.searchItems(this.query, parseInt(this.perPage.value));
     this.pageIndex = 0;
   }

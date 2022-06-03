@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pc } from '../interfaces/interfaces';
 import { DataService } from '../services/data/data.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DataService } from '../services/data/data.service';
 })
 export class HomeComponent implements OnInit {
 
-  pcs: any[] = [];
+  pcs: Pc[] = [];
 
   constructor(private dataService: DataService) { }
 

@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" *ngIf="currentPcData != null">
   <div class="modal_selection_composant" [ngClass]="{ active: modalOpened }">
     <div class="topbar">
       <h2>Changer {{ currentComponent }}</h2>
@@ -90,10 +90,31 @@
         ></app-text-icon-button>
       </div>
       <div class="right col">
-        <div *ngFor="let key of pcSystemKeys" class="component">
+        <div class="component">
           <app-search-item
             (buttonClicked)="handleEditClick($event)"
-            [item]="currentPcData.system[key]"
+            [item]="currentPcData.system.ram"
+            [configurateur]="true"
+          ></app-search-item>
+        </div>
+        <div class="component">
+          <app-search-item
+            (buttonClicked)="handleEditClick($event)"
+            [item]="currentPcData.system.hdd"
+            [configurateur]="true"
+          ></app-search-item>
+        </div>
+        <div class="component">
+          <app-search-item
+            (buttonClicked)="handleEditClick($event)"
+            [item]="currentPcData.system.cpu"
+            [configurateur]="true"
+          ></app-search-item>
+        </div>
+        <div class="component">
+          <app-search-item
+            (buttonClicked)="handleEditClick($event)"
+            [item]="currentPcData.system.cg"
             [configurateur]="true"
           ></app-search-item>
         </div>

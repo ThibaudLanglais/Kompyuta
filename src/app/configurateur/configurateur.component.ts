@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ComponentInterface, Data, Pc } from '../interfaces/interfaces';
 import { DataService } from '../services/data/data.service';
 import { PanierService } from '../services/panier/panier.service';
 
@@ -10,10 +11,10 @@ import { PanierService } from '../services/panier/panier.service';
 })
 export class ConfigurateurComponent implements OnInit {
   
-  currentPcData: any = {};
-  pcSystemKeys: any[] = [];
-  components: any[] = [];
-  filteredComponents: any[] = [];
+  currentPcData: Pc | null = null;
+  pcSystemKeys: string[] = [];
+  components: ComponentInterface[] = [];
+  filteredComponents: ComponentInterface[] = [];
   modalOpened: boolean = false;
   currentComponent: string = '';
   public dataService: DataService;
@@ -24,13 +25,12 @@ export class ConfigurateurComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.getComponents();
-    this.dataService.dataSubscription().subscribe((dataService: any) => this.components = dataService.components);
+    this.dataService.dataSubscription().subscribe((data: Data) => this.components = data.components);
     this.route.queryParams
       .subscribe(params => {
-        if(!params['pcData']) this.router.navigate(['404']);
-        else{
+        if(params['pcData']){
           this.currentPcData = JSON.parse(decodeURIComponent(params['pcData']));
-          this.pcSystemKeys = Object.keys(this.currentPcData.system);
+          if(this.currentPcData) this.pcSystemKeys = Object.keys(this.currentPcData.system);
         }
       }
     );
@@ -50,9 +50,11 @@ export class ConfigurateurComponent implements OnInit {
   }
 
   onSelectItemClick(componentId: number){
-    this.currentPcData.system[this.currentComponent] = componentId;
-    this.pcSystemKeys = [...this.pcSystemKeys];
-    this.modalOpened = false;
+    if(this.currentPcData){
+      this.currentPcData.system[this.currentComponent as keyof typeof this.currentPcData.system] = componentId;
+      this.pcSystemKeys = [...this.pcSystemKeys];
+      this.modalOpened = false;
+    }
   }
 
   onCloseModalClick(){
@@ -62,11 +64,14 @@ export class ConfigurateurComponent implements OnInit {
   handleEditClick(componentType: string){
     this.currentComponent = componentType
     this.modalOpened = true;
-    this.filteredComponents = this.components.filter((c:any) => c.composant == componentType)
+    this.filteredComponents = this.components.filter((c:ComponentInterface) => c.composant == componentType)
   }
 
   onConfirmPcClick(){
-    this.currentPcData.custom = true;
-    this.panier.addPanier(this.currentPcData)
+    if(this.currentPcData){
+      this.currentPcData.custom = true;
+      this.currentPcData.bonus3000 = true;
+      this.panier.addPanier(this.currentPcData)
+    }
   }
 }

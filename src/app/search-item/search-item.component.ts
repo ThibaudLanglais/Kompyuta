@@ -14,8 +14,10 @@ export class SearchItemComponent implements OnInit, OnChanges {
   @Input() index?: number;
   @Input() configurateur?: boolean = false;
   @Output() buttonClicked: EventEmitter<string> = new EventEmitter<string>();
+  dataService: DataService;
 
-  constructor(private panierService: PanierService, private dataService: DataService) { 
+  constructor(private panierService: PanierService, private dataServiceParam: DataService) { 
+    this.dataService = dataServiceParam;
   }
   ngOnChanges(changes: SimpleChanges): void {
     this.init()

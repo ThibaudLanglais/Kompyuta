@@ -14,9 +14,9 @@ import { PanierService } from '../services/panier/panier.service';
 
 export class HeaderComponent implements OnInit {
   
-  whiteClass = false;
-  menuActive = false;
-  searchActive = false;
+  whiteClass: boolean = false;
+  menuActive: boolean = false;
+  searchActive: boolean = false;
   panierItemsNumber?: Number;
   searchFormGroup: FormGroup = new FormGroup({
     query: new FormControl('')
