@@ -1,1 +1,76 @@
-<p>comparateur works!</p>
+<div class="content">
+  <app-modale
+    [modalOpened]="modalOpened"
+    [filteredElements]="dataService.dataValue.pcs"
+    (modalClosed)="onModalClosed()"
+    (selectItemEvent)="onSelectPc($event)"
+  ></app-modale>
+  <section>
+    <h1 class="header_2 h_3000">Le comparateur</h1>
+  </section>
+  <section>
+    <div class="topbar">
+      <div class="pc_slot">
+        <div class="pc_info">
+          <img
+            src="../../assets/images_ordis/{{
+              currentPcData1 ? currentPcData1.images[0] : 'default.jpg'
+            }}"
+            alt="Produit 1"
+          />
+          <h2>
+            {{
+              currentPcData1 ? currentPcData1.nom : "Sélectionnez un produit"
+            }}
+          </h2>
+        </div>
+        <app-text-icon-button
+          (click)="onSelectPcClick(1)"
+          image="<i class='fa-solid fa-pen'></i>"
+        ></app-text-icon-button>
+      </div>
+      <span>vs</span>
+      <div class="pc_slot">
+        <app-text-icon-button
+          (click)="onSelectPcClick(2)"
+          image="<i class='fa-solid fa-pen'></i>"
+        ></app-text-icon-button>
+        <div class="pc_info">
+          <img
+            src="../../assets/images_ordis/{{
+              currentPcData2 ? currentPcData2.images[0] : 'default.jpg'
+            }}"
+            alt="Produit 1"
+          />
+          <h2>
+            {{
+              currentPcData2 ? currentPcData2.nom : "Sélectionnez un produit"
+            }}
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="currentPcData1 && currentPcData2" class="results">
+      <app-comparaison
+        class="comparaison_container"
+        [nbComponent1]="currentPcData1.system.ram"
+        [nbComponent2]="currentPcData2.system.ram"
+      ></app-comparaison>
+      <app-comparaison
+        class="comparaison_container"
+        [nbComponent1]="currentPcData1.system.hdd"
+        [nbComponent2]="currentPcData2.system.hdd"
+      ></app-comparaison>
+      <app-comparaison
+        class="comparaison_container"
+        [nbComponent1]="currentPcData1.system.cpu"
+        [nbComponent2]="currentPcData2.system.cpu"
+      ></app-comparaison>
+      <app-comparaison
+        class="comparaison_container"
+        [nbComponent1]="currentPcData1.system.cg"
+        [nbComponent2]="currentPcData2.system.cg"
+      ></app-comparaison>
+    </div>
+  </section>
+</div>

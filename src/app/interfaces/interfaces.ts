@@ -38,7 +38,7 @@ export interface ComponentInterface{
    nom?: string
    marque?: string,
    modele?: string,
-   score?: number,
+   score: number,
    composant: string,
    prix: number,
    id: number,

@@ -1,37 +1,11 @@
 <div class="content" *ngIf="currentPcData != null">
-  <div class="modal_selection_composant" [ngClass]="{ active: modalOpened }">
-    <div class="topbar">
-      <h2>Changer {{ currentComponent }}</h2>
-      <div class="close">
-        <app-text-icon-button
-          (click)="onCloseModalClick()"
-          image='<i class="fa-solid fa-xmark"></i>'
-          bg="brown"
-          color="white"
-        ></app-text-icon-button>
-      </div>
-    </div>
-    <div class="items">
-      <div *ngFor="let item of filteredComponents" class="item">
-        <p class="name">
-          {{ item.marque ? item.marque : "" }}
-          {{ item.nom ? item.nom : "" }}
-          {{ item.modele ? item.modele : "" }}
-          {{ item.quantite ? "2x" + item.quantite + "Go" : "" }}
-          {{ item.frequence ? item.frequence : "" }}
-          {{ item.storageType ? item.storageType : "" }}
-          {{ item.capacite ? item.capacite + "GB" : "" }}
-        </p>
-        <div>
-          <p>{{ item.prix }}€</p>
-          <app-text-icon-button
-            (click)="onSelectItemClick(item.id)"
-            image='<i class="fa-solid fa-plus"></i>'
-          ></app-text-icon-button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-modale
+    [modalOpened]="modalOpened"
+    [currentComponent]="currentComponent"
+    [filteredElements]="filteredComponents"
+    (modalClosed)="onModalClose()"
+    (selectItemEvent)="onSelectItemClick($event)"
+  ></app-modale>
   <section>
     <h2 class="header_2 h_3000">Le configurateur</h2>
   </section>
@@ -123,11 +97,12 @@
   </section>
 </div>
 
-
 <div class="content" *ngIf="currentPcData == null">
   <section>
     <h2 class="header_2 h_3000">Le configurateur</h2>
   </section>
 
-  <p class="no-data">Rendez-vous dans notre catalogue pour choisir un ordinateur à configurer</p>
+  <p class="no-data">
+    Rendez-vous dans notre catalogue pour choisir un ordinateur à configurer
+  </p>
 </div>

@@ -15,7 +15,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "338.74",
-    "id": 5944
+    "id": 5944,
+    "score": 8966
   },
   {
     "typeObjet": "composant",
@@ -45,7 +46,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "374.68",
-    "id": 2539
+    "id": 2539,
+    "score": 6155
   },
   {
     "typeObjet": "composant",
@@ -75,7 +77,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "563.96",
-    "id": 8727
+    "id": 8727,
+    "score": 3893
   },
   {
     "typeObjet": "composant",
@@ -105,7 +108,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "302.73",
-    "id": 2467
+    "id": 2467,
+    "score": 8050
   },
   {
     "typeObjet": "composant",
@@ -135,7 +139,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "400.06",
-    "id": 9233
+    "id": 9233,
+    "score": 2398
   },
   {
     "typeObjet": "composant",
@@ -165,7 +170,8 @@
     "vitesse-transfert": 300,
     "composant": "hdd",
     "prix": "356.92",
-    "id": 1517
+    "id": 1517,
+    "score": 3312
   },
   {
     "typeObjet": "composant",
@@ -195,7 +201,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "479.67",
-    "id": 9558
+    "id": 9558,
+    "score": 3883
   },
   {
     "typeObjet": "composant",
@@ -225,7 +232,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "360.07",
-    "id": 1208
+    "id": 1208,
+    "score": 9549
   },
   {
     "typeObjet": "composant",
@@ -255,7 +263,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "110.77",
-    "id": 8990
+    "id": 8990,
+    "score": 7087
   },
   {
     "typeObjet": "composant",
@@ -285,7 +294,8 @@
     "vitesse-transfert": 3000,
     "composant": "hdd",
     "prix": "560.18",
-    "id": 60
+    "id": 60,
+    "score": 8272
   },
   {
     "typeObjet": "composant",
@@ -315,7 +325,8 @@
     "vitesse-transfert": 100,
     "composant": "hdd",
     "prix": "122.91",
-    "id": 7149
+    "id": 7149,
+    "score": 2673
   },
   {
     "typeObjet": "composant",
@@ -345,7 +356,8 @@
     "vitesse-transfert": 400,
     "composant": "hdd",
     "prix": "185.45",
-    "id": 9431
+    "id": 9431,
+    "score": 1172
   },
   {
     "typeObjet": "composant",
@@ -375,7 +387,8 @@
     "vitesse-transfert": 50,
     "composant": "hdd",
     "prix": "495.16",
-    "id": 1358
+    "id": 1358,
+    "score": 9166
   },
   {
     "typeObjet": "composant",
@@ -396,7 +409,8 @@
     "prix": "554.31",
     "frequence": "DDR3 1033MHz",
     "quantite": 8,
-    "id": 2135
+    "id": 2135,
+    "score": 3023
   },
   {
     "typeObjet": "composant",
@@ -405,7 +419,8 @@
     "prix": "287.31",
     "frequence": "DDR4 1800MHz",
     "quantite": 32,
-    "id": 6503
+    "id": 6503,
+    "score": 4416
   },
   {
     "typeObjet": "composant",
@@ -414,7 +429,8 @@
     "prix": "183.45",
     "frequence": "DDR4 1600MHz",
     "quantite": 16,
-    "id": 2242
+    "id": 2242,
+    "score": 9466
   },
   {
     "typeObjet": "composant",
@@ -423,7 +439,8 @@
     "prix": "151.23",
     "frequence": "DDR4 1600MHz",
     "quantite": 8,
-    "id": 9513
+    "id": 9513,
+    "score": 3993
   },
   {
     "typeObjet": "composant",
@@ -432,7 +449,8 @@
     "prix": "573.82",
     "frequence": "DDR3 1033MHz",
     "quantite": 16,
-    "id": 2744
+    "id": 2744,
+    "score": 4643
   },
   {
     "typeObjet": "composant",
@@ -441,7 +459,8 @@
     "prix": "440.51",
     "frequence": "DDR4 1600MHz",
     "quantite": 16,
-    "id": 1587
+    "id": 1587,
+    "score": 1427
   },
   {
     "typeObjet": "composant",
@@ -450,7 +469,8 @@
     "prix": "456.05",
     "frequence": "DDR4 1800MHz",
     "quantite": 8,
-    "id": 616
+    "id": 616,
+    "score": 1069
   },
   {
     "typeObjet": "composant",
@@ -459,7 +479,8 @@
     "prix": "547.01",
     "frequence": "DDR3 1033MHz",
     "quantite": 8,
-    "id": 6556
+    "id": 6556,
+    "score": 7306
   },
   {
     "typeObjet": "composant",
@@ -468,7 +489,8 @@
     "prix": "564.99",
     "frequence": "DDR5 3200MHz",
     "quantite": 32,
-    "id": 5627
+    "id": 5627,
+    "score": 4877
   },
   {
     "typeObjet": "composant",
@@ -477,7 +499,8 @@
     "prix": "295.54",
     "frequence": "DDR5 3200MHz",
     "quantite": 64,
-    "id": 5657
+    "id": 5657,
+    "score": 6647
   },
   {
     "typeObjet": "composant",
@@ -486,7 +509,8 @@
     "prix": "360.43",
     "frequence": "DDR4 1600MHz",
     "quantite": 8,
-    "id": 5559
+    "id": 5559,
+    "score": 6633
   },
   {
     "typeObjet": "composant",
@@ -495,7 +519,8 @@
     "prix": "481.83",
     "frequence": "DDR5 3200MHz",
     "quantite": 8,
-    "id": 9774
+    "id": 9774,
+    "score": 7429
   },
   {
     "typeObjet": "composant",
@@ -504,6 +529,7 @@
     "prix": "126.70",
     "frequence": "DDR4 1800MHz",
     "quantite": 32,
-    "id": 1295
+    "id": 1295,
+    "score": 3268
   }
 ]

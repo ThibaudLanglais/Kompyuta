@@ -1,0 +1,18 @@
+.component{
+   display: flex;
+   .side{
+      padding: 15px;
+      flex: 1;
+      &.left{
+         text-align: left;
+      }
+      &.right{
+         text-align: right;
+      }
+   }
+   .center{
+      padding: 15px;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+   }
+}

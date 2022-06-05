@@ -24,6 +24,8 @@ import { PageSearchComponent } from './page-search/page-search.component';
 import { NgLetDirective } from './directives/ng-let/ng-let.directive';
 import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import { ComparaisonComponent } from './comparaison/comparaison.component';
+import { ModaleComponent } from './modale/modale.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -45,7 +47,9 @@ registerLocaleData(localeFr);
     PagePanierComponent,
     PageNotFoundComponent,
     PageSearchComponent,
-    NgLetDirective
+    NgLetDirective,
+    ComparaisonComponent,
+    ModaleComponent
   ],
   imports: [
     BrowserModule,

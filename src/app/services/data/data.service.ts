@@ -11,8 +11,6 @@ export class DataService {
   dataState = new Subject<Data>();
   dataValue: Data = {components: [], pcs: []};
   dataFetched: boolean = false;
-  componentsObservable: Observable<any> = new Observable();
-  pcsObservable: Observable<Pc[]> = new Observable();
 
   constructor(private http: HttpClient) { 
     this.getComponents();

@@ -57,7 +57,7 @@ export class ConfigurateurComponent implements OnInit {
     }
   }
 
-  onCloseModalClick(){
+  onModalClose(){
     this.modalOpened = false;
   }
 

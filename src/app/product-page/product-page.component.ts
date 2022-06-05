@@ -55,5 +55,9 @@ export class ProductPageComponent implements OnInit {
   navigateConfigurateur(){
     this.router.navigate(['configurateur'], {queryParams: {pcData: encodeURIComponent(JSON.stringify(this.data))}})
   }
+  
+  navigateComparateur(){
+    this.router.navigate(['comparateur'], {queryParams: {pcData1: encodeURIComponent(JSON.stringify(this.data))}})
+  }
 
 }

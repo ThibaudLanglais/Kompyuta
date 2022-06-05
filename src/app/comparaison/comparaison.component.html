@@ -1,0 +1,31 @@
+<div class="component">
+  <div *ngIf="component1" class="side left">
+    {{ component1.marque ? component1.marque : "" }}
+    {{ component1.nom ? component1.nom : "" }}
+    {{ component1.modele ? component1.modele : "" }}
+    {{ component1.quantite ? "2x" + component1.quantite + "Go" : "" }}
+    {{ component1.frequence ? component1.frequence : "" }}
+    {{ component1.storageType ? component1.storageType : "" }}
+    {{ component1.capacite ? component1.capacite + "GB" : "" }}
+  </div>
+  <div *ngIf="component1 && component2" class="center">
+    <span *ngIf="component1.score == component2.score">
+      <i class="fa-solid fa-equals"></i>
+    </span>
+    <span *ngIf="component1.score < component2.score">
+      <i class="fa-solid fa-arrow-right"></i>
+    </span>
+    <span *ngIf="component1.score > component2.score">
+      <i class="fa-solid fa-arrow-left"></i>
+    </span>
+  </div>
+  <div *ngIf="component2" class="side right">
+    {{ component2.marque ? component2.marque : "" }}
+    {{ component2.nom ? component2.nom : "" }}
+    {{ component2.modele ? component2.modele : "" }}
+    {{ component2.quantite ? "2x" + component2.quantite + "Go" : "" }}
+    {{ component2.frequence ? component2.frequence : "" }}
+    {{ component2.storageType ? component2.storageType : "" }}
+    {{ component2.capacite ? component2.capacite + "GB" : "" }}
+  </div>
+</div>

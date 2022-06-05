@@ -294,7 +294,7 @@ nav {
             .submenu{
                background: none;
                opacity: 1;
-               pointer-events: all;
+               pointer-events: none;
                position: relative;
                margin-left: 15px;
                display: flex;
@@ -351,6 +351,11 @@ nav {
             transform: translateY(0);
             opacity: 1;
             pointer-events: all;
+            > li{
+               .submenu{
+                  pointer-events: all;
+               }
+            }
          }
          .mobile-toggle{
             span{
