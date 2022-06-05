@@ -37,3 +37,14 @@
       }
    }
 }
+
+@media screen and (max-width: 900px) {
+   .topbar {
+      flex-direction: column;
+   }
+
+   .pc_slot {
+      flex-direction: column;
+   }
+}
+
