@@ -230,14 +230,14 @@ nav {
       top: 10px;
       left: 50%;
       width: 50%;
-      min-width: 400px;
+      min-width: 300px;
       transform: translateX(-50%);
       pointer-events: none;
       &.active{
          pointer-events: all;
          input{
             opacity: 1;
-            transform: translateX(0);
+            transform: translate(0, 50px);
             transition: transform 0.3s cubic-bezier(.79,.05,.02,.96), opacity 0.1s linear 0.2s;
          }
       }

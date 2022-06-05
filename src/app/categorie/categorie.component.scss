@@ -48,8 +48,39 @@
          gap: 10px;
       }
    }
+
+   .confirm-selection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   } 
 }
 .no-product{
    text-align: center;
    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 850px) {
+   .search_section {
+      flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 525px) {
+   .search_section {
+      .results .topbar {
+         display: none;
+      }
+
+
+   }
+}
+
+@media screen and (max-width: 420px) {
+   .search_section {
+      
+      .filters {
+         padding: 10px;
+      }
+   }
 }

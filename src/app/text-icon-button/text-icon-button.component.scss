@@ -22,9 +22,9 @@ button{
 @media screen and (max-width: 420px) {
    button {
       margin: 5px auto;
-      width: 280px;
+      width: 260px;
       &.iconOnly {
-         width: 280px;
+         // width: 280px;
          margin-top: 20px;
       }
    }

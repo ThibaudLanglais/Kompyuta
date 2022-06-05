@@ -3,7 +3,7 @@
    margin-bottom: 50px;
 }
 .quiz{
-   width: min(100%, 650px);
+   width: min(95%, 650px);
    margin: auto;
    padding-top: 20px;
    .progress-bar{
@@ -71,5 +71,12 @@
    .actions{
       display: flex;
       justify-content: center;
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .quiz .actions {
+      flex-direction: column;
+      align-items: center;
    }
 }

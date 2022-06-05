@@ -89,7 +89,8 @@ body {
     margin: 10px 0;
   }
   .header_2 {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    text-align: center;
     margin: auto;
     position: relative;
     width: fit-content;
@@ -134,4 +135,8 @@ body {
   0%{background-position:0% 82%}
   50%{background-position:100% 19%}
   100%{background-position:0% 82%}
+}
+
+@media screen and (max-width: 500) {
+  
 }

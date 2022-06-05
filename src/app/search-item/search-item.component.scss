@@ -30,3 +30,13 @@ p{
       font-weight: bold;
    }
 }
+@media screen and (max-width: 625px) {
+   .item {
+      flex-direction: column;
+      height: auto;
+   }
+
+   .actions {
+      margin-left: 0;
+   }
+}

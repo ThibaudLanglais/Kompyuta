@@ -52,7 +52,7 @@
     top: 40%;
     padding: 20px;
     transform: translate(-50%, -50%);
-    width: 50vw;
+    width: 70vw;
     height: 60vh;
     overflow-y: auto;
     z-index: 1;
@@ -94,5 +94,24 @@
     .no_ram{
         width: 300px;
         object-fit: contain;
+    }
+}
+
+.no-data {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .columns {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .columns .col { padding: 10px; }
+
+    .modal_selection_composant {
+        width: 95vw;
     }
 }
