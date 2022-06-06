@@ -3,6 +3,7 @@ export interface Data {
    components: ComponentInterface[]
 }
 export interface Pc {
+   panierId?: string,
    typeObjet: string,
    description: string | null,
    id: number,

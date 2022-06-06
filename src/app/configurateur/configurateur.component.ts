@@ -17,13 +17,12 @@ export class ConfigurateurComponent implements OnInit {
   filteredComponents: ComponentInterface[] = [];
   modalOpened: boolean = false;
   currentComponent: string = '';
-  public dataService: DataService;
 
-  constructor(private route: ActivatedRoute, private router: Router, private ds: DataService, private panier: PanierService) {
-    this.dataService = ds;
+  constructor(private route: ActivatedRoute, private router: Router, public dataService: DataService, private panier: PanierService) {
   }
 
   ngOnInit() {
+    // Récupèration des données
     this.dataService.getComponents();
     this.dataService.dataSubscription().subscribe((data: Data) => this.components = data.components);
     this.route.queryParams
@@ -36,24 +35,24 @@ export class ConfigurateurComponent implements OnInit {
     );
   }
 
-  parse(data: any){
-    const acceptedKeys = ['nom', 'modele', 'marque']
-    if(typeof data == 'object'){
-      var str = ''
-      Object.keys(data).filter(a => acceptedKeys.includes(a)).forEach(key=>{
-        str += data[key] + ' '
-      })
-      return str
-    }else{
-      return data;
-    }
+  // Quand on appuie sur éditer le composant
+  // enregistre le composant édité (ram, cpu, cg, hdd)
+  // et récupère les composants selon le type
+  handleEditClick(componentType: string){
+    this.currentComponent = componentType
+    this.modalOpened = true;
+    this.filteredComponents = this.components.filter((c:ComponentInterface) => c.composant == componentType)
   }
 
+  // Quand on appuie sur "+" pour sélectionner le composant
+  // update le composant du PC en accord avec la sélection
   onSelectItemClick(componentId: number){
     if(this.currentPcData){
       this.currentPcData.system[this.currentComponent as keyof typeof this.currentPcData.system] = componentId;
-      this.pcSystemKeys = [...this.pcSystemKeys];
       this.modalOpened = false;
+      
+      // Permet de refresh la liste des composants
+      this.pcSystemKeys = [...this.pcSystemKeys];
     }
   }
 
@@ -61,12 +60,9 @@ export class ConfigurateurComponent implements OnInit {
     this.modalOpened = false;
   }
 
-  handleEditClick(componentType: string){
-    this.currentComponent = componentType
-    this.modalOpened = true;
-    this.filteredComponents = this.components.filter((c:ComponentInterface) => c.composant == componentType)
-  }
-
+  // Demande au service "panier" d'ajouter le PC au panier
+  // ajoute les champs "custom" et "bonus3000"
+  // permettant un affichage différent dans le panier
   onConfirmPcClick(){
     if(this.currentPcData){
       this.currentPcData.custom = true;

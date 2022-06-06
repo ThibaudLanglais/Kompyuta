@@ -9,9 +9,13 @@ import { DataService } from '../services/data/data.service';
 })
 export class ComparaisonComponent implements OnInit, OnChanges {
 
+  // Composant gérant la comparaison de deux composants d'un PC
+
+  // Les IDs de chaque composant
   @Input() nbComponent1: number|null = null;
   @Input() nbComponent2?: number;
   
+  // Les objets de chaque composant
   component1: ComponentInterface|null = null;
   component2: ComponentInterface|null = null;
 
@@ -19,6 +23,8 @@ export class ComparaisonComponent implements OnInit, OnChanges {
   constructor(private dataService: DataService) {
   }
   
+  // On fetch, et on récupère les (deux) composants demandées
+  // Le reste de l'affichage est géré en HTML pour la comparaison
   ngOnInit(): void {
     this.dataService.getComponents()
     this.dataService.dataSubscription().subscribe((val: Data) => {
@@ -27,6 +33,8 @@ export class ComparaisonComponent implements OnInit, OnChanges {
     })
   }
 
+  // L'UI n'était pas update quand les champs @Input() changaient
+  // d'où cette fonction pour forcer l'update UI 
   ngOnChanges(changes: SimpleChanges): void {
     this.ngOnInit()
   }

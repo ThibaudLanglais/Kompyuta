@@ -7,9 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./page-test.component.scss']
 })
 export class PageTestComponent implements OnInit {
+  
+  // Page gérant le profil d'un utilisateur pour lui conseiller des pcs 
 
   constructor(private router: Router) { }
 
+  //Liste des questions = du questionnaire
   questions = 
   [
     {
@@ -129,10 +132,13 @@ export class PageTestComponent implements OnInit {
     this.updateProgression()
   }
 
+  // Update quand l'utilisateur change sa réponse dans le formulaire
   onAnswerChange(index: number){
     this.currentAnswer = this.currentQuestion.answers[index].value;
   }
 
+  // Revient à la dernière question en éliminant le dernier élément
+  // de la liste des questions répondues et des réponses choisies
   prevQuestion(){
     if(this.questionsAnswered > 0){
       this.questionsAnswered--;
@@ -144,7 +150,11 @@ export class PageTestComponent implements OnInit {
     }
   }
 
+  // Avance à la prochaine question
   nextQuestion(){
+    // si la question actuelle est en réalité l'écran de fin, on quitte la page 
+    // pour aller sur la page de recherche avec les filtres correspondant
+    // aux réponses de l'utilisateur
     if(this.currentQuestion == this.endingScreen){
       var final: any = {}
       this.answersHistory.forEach((el: any) =>{
@@ -153,19 +163,26 @@ export class PageTestComponent implements OnInit {
         })
       })
       this.router.navigate(['search'], { queryParams: {tags: JSON.stringify(final)}});
+
+      // Sinon, si une réponse a été cochée on continue
     }else if(this.currentAnswer !== null){
       this.questionsAnswered++;
       this.questionsHistory.push(this.currentQuestion.id)
       var tmp: any = {}
       tmp[this.currentQuestion.name] = this.currentAnswer
       this.answersHistory.push(tmp)
+      // Si il n'y a pas de question suivante, on affiche l'écran de fin
       if(this.currentQuestion.next == null){
         this.currentQuestion = this.endingScreen
         this.updateProgression(true);
+      // Sinon on affiche la prochaine question
       }else{
         this.updateProgression();
+        // Si il n'y a qu'une seule prochaine question on y va
         if(typeof this.currentQuestion.next == "number"){
           this.currentQuestion = this.questions.filter((question: any) => question.id == this.currentQuestion.next)[0]
+        // Sinon on sélectionne la prochaine question en fonction de la réponse de l'utilisateur
+        // à la question précédente
         }else{
           this.currentQuestion = this.questions.filter((question: any) => question.id == this.currentQuestion.next[this.currentAnswer])[0]
         }
@@ -174,6 +191,7 @@ export class PageTestComponent implements OnInit {
     }
   }
 
+  // Update de la progression selon le nombre de questions répondues
   updateProgression(completed?: boolean){
     if(completed) this.progression = 100;
     else this.progression = Math.round(this.questionsAnswered * 100/ this.questions.length)

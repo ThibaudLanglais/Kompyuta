@@ -9,6 +9,8 @@ import { DataService } from '../services/data/data.service';
 })
 export class HomeComponent implements OnInit {
 
+  // Page d'accueil, récupération des PCs pour les différentes sections
+
   pcs: Pc[] = [];
 
   constructor(private dataService: DataService) { }

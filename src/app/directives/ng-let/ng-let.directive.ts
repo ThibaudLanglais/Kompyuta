@@ -1,5 +1,12 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
+// 
+// 
+// Directive custom pour utiliser "let" directement dans un composant
+// Utilisé dans le configurateur.html ligne 25
+// 
+// 
+
 interface ILetContext<T> {
   ngLet: T;
 }

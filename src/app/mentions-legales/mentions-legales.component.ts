@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MentionsLegalesComponent implements OnInit {
 
+  // Franchement, on n’avait pas envie
+
   constructor() { }
 
   ngOnInit(): void {

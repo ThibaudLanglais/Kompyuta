@@ -8,6 +8,9 @@ import { Data, Pc, QueryParams, ComponentInterface } from '../../interfaces/inte
 })
 export class DataService {
 
+  // Service gérant les données et permettant des opérations de base
+  // sur celles-ci : filtrage, récupération..
+
   dataState = new Subject<Data>();
   dataValue: Data = {components: [], pcs: []};
   dataFetched: boolean = false;
@@ -41,7 +44,6 @@ export class DataService {
     return this.dataValue.components.filter((el: ComponentInterface) => el.id == id)[0];
   }
 
-
   getItemsByCat(cat: string): (Pc|ComponentInterface)[]{
     if(cat == 'composants'){
       return this.dataValue.components;
@@ -58,25 +60,36 @@ export class DataService {
     return this.dataState.asObservable();
   }
 
+  // Fonction plus complexe pour rechercher des éléments
   searchItems(params: QueryParams, perPage?: number): (Pc|ComponentInterface)[][]{
     var pagesTmp: (Pc|ComponentInterface)[][] = [], tmp: (Pc|ComponentInterface)[] = [];
+
+    // Premier cas : recherche via le champs texte de la navbar
     if(params.query != null){
       params.query.split(' ').forEach((param: string)=>{
+        // conversion en string de tout l'objet, et on cherche
+        // n'importe où ce que l'utilisateur a cherché
         tmp = this.dataValue.pcs;
         tmp = tmp.concat(this.dataValue.components);
         tmp = tmp.filter((el: ComponentInterface|Pc) => JSON.stringify(el).toLowerCase().indexOf(param.toLowerCase()) != -1)
       })
+    // Deuxième cas : on vient du Quizz profil utilisateur
     }else if(params.tags != null){
+      // On récupère chaque tag correspondant aux réponses du Quizz
       var tags = JSON.parse(params.tags);
+      // On filtre chaque élément (uniquement pc)
       tmp = this.dataValue.pcs.filter((el: Pc) => {
         var counter = 0;
+        // On compte combien de choix de l'utilisateur sont présent dans la liste des tags du pC
         Object.keys(tags).forEach((key: string) => {
           if(el.tags?.includes(tags[key])) counter++;
         })
-        // Si plus de 50% des tags correspondent, on renvoie le produit
-        return counter/Object.keys(tags).length > 0.5;
+        // Si (plus de) 50% des tags correspondent, on renvoie le produit
+        return counter/Object.keys(tags).length >= 0.5;
       })
     }
+
+    // Gère les pages de résultats pour la navigation
     if(perPage && perPage != -1){
       for (let i = 0; i < tmp.length; i += perPage) {
         pagesTmp.push(tmp.slice(i, i + perPage));
@@ -87,19 +100,27 @@ export class DataService {
     return pagesTmp;
   }
 
-  getTotalPrice(pc: Pc): number{
+  // Parcours les composants d'un PC et additionne leur prix
+  getTotalPrice(el: any): number{
     var price = 0;
-    this.dataFetched && Object.keys(pc.system).forEach((key: any) =>{
-      var tmp: ComponentInterface|null = this.getComponentById(pc.system[key as keyof typeof pc.system])
-      if(tmp) price += parseFloat(tmp.prix.toString())
-    })
-    return parseFloat(price.toFixed(2))
+    if(el.typeObjet == 'pc'){
+      this.dataFetched && Object.keys(el.system).forEach((key: any) =>{
+        var tmp: ComponentInterface|null = this.getComponentById(el.system[key as keyof typeof el.system])
+        if(tmp) price += parseFloat(tmp.prix.toString())
+      })
+      return parseFloat(price.toFixed(2))
+    }else{
+      return el.prix;
+    }
   }
 
+  // Parcours tous les Pcs autres que celui donné en paramètre
+  // et renvoie ceux dont plus de 2 tags sont similaires
   getSimilarProducts(pc: Pc): Pc[]{
     return this.dataValue.pcs.filter(el => el.id != pc.id && el.type == pc.type && el.tags?.filter((value: string) => pc.tags?.includes(value)).length >= 3)
   }
 
+  // Génère le tableau des images de chaque PC selon son ID
   addImages(array: Pc[]): Pc[]{
     var res: Pc[] = []
     array.forEach((el:Pc) => {

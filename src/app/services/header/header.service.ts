@@ -7,6 +7,9 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class HeaderService {
 
+  // Service lié au header qui update un booleen indiquant si
+  // la navbar doit être blanche ou noir (uniquement page accueil)
+
   public headerSubject: Subject<boolean> = new BehaviorSubject<boolean>(true);
   public headerIsWhite = this.headerSubject.asObservable();
   public url: String = '';

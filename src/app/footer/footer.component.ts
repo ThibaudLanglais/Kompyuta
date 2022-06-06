@@ -7,10 +7,9 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
 
-  routerProp: Router;
+  // simple footer
 
-  constructor(private router: Router) { 
-    this.routerProp = router;
+  constructor(public router: Router) { 
   }
 
   ngOnInit(): void {

@@ -12,16 +12,17 @@ import { PanierService } from '../services/panier/panier.service';
 })
 export class ProductPageComponent implements OnInit {
 
+  // Page affichant le détail d'un produit (PC)
+
   currentImageIndex: number = 0;
   data: Pc | null = null;
   filledStars: Array<number> = [];
   shallowStars: Array<number> = [];
-  public dataService: DataService;
 
-  constructor(private route: ActivatedRoute, private dataS: DataService, private router: Router, private panierService: PanierService) { 
-    this.dataService = dataS;
+  constructor(private route: ActivatedRoute, public dataService: DataService, private router: Router, private panierService: PanierService) { 
   }
   
+  // Récupère les données du PC
   ngOnInit(): void {
     this.route.params.subscribe((val: any)=>{
       this.initData(val)
@@ -33,23 +34,27 @@ export class ProductPageComponent implements OnInit {
   
   initData(params: any){
     var pc = this.dataService.getPcFromId(params.id);
+    // Si un pc est trouvé on instancie deux tableaux pour générer l'HTML des reviews
     if(pc) {
       this.data = pc;
       var positive = Math.ceil((this.data.reviews.positive*5)/(this.data.reviews.positive + this.data.reviews.negative))
       this.filledStars = Array(positive)
       this.shallowStars = Array(5-positive)
     }
+    // Sinon si on a pas trouvé de PC (même si les données ont bien été fetched)
+    // On va sur la page 404
     else if(this.dataService.dataFetched) {
-      this.router.navigate([''])
+      this.router.navigate(['404'])
     }
   }
 
+  // Permet d'update quelle photo du produit est affichée en grand
   updateMain(newMain: number){
     this.currentImageIndex = newMain;
   }
 
   onClickAjouterPanier(){
-    this.panierService.addPanier(this.data)
+    if(this.data) this.panierService.addPanier(this.data)
   }
 
   navigateConfigurateur(){

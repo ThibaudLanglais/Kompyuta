@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
+import { Pc } from 'src/app/interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PanierService {
 
+  // Service de panier se servant du localstorage
+
   panierState = new Subject<Panier>();
   panierValue: Panier = {items: []};
 
-  constructor() {
+  constructor(private router: Router) {
     this.getPanier()
   }
 
@@ -25,10 +29,14 @@ export class PanierService {
     localStorage.setItem('panier', JSON.stringify(this.panierValue));
   }
 
-  addPanier(element: any){
-    this.panierValue.items.push(element);
+  addPanier(element: Pc){
+    var tmp: Pc = JSON.parse(JSON.stringify(element));
+    if(tmp.panierId == null) tmp.panierId = `basket_${Date.now()}_${Math.round(Math.random()*100)}`
+    this.panierValue.items = this.panierValue.items.filter((el:Pc) => el.panierId != tmp.panierId);
+    this.panierValue.items.push(tmp);
     this.panierState.next(this.panierValue);
     this.setPanier()
+    this.router.navigate(['panier'])
   }
 
   deleteFromPanier(element: number){
@@ -52,5 +60,5 @@ export class PanierService {
 }
 
 interface Panier {
-  items: any[];
+  items: Pc[];
 }

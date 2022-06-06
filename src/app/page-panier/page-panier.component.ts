@@ -9,6 +9,7 @@ import { PanierService } from '../services/panier/panier.service';
 })
 export class PagePanierComponent implements OnInit {
 
+  // Simple page affichant les éléments du panier
   data: Pc[] = [];
 
   constructor(private panierService: PanierService) { }
