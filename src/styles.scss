@@ -53,6 +53,7 @@ body {
   width: 100vw;
   margin: 0;
   overflow-x: hidden;
+  transform-origin: 50vw 50vh;
   &.secret3000{
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 1800% 1800%;
@@ -60,6 +61,10 @@ body {
     #site_logo_svg{
       animation-name: hue-rotate;
     }
+  }
+  &.SWAG360{
+  transition: transform 1s ease-in-out;
+  transform: rotate(360deg);
   }
   app-root{
     height: 100%;

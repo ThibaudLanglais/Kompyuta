@@ -24,15 +24,49 @@
     <app-root></app-root>
   </body>
   <script>
-    var secret = "bonus3000";
+    const secret = "bonus3000";
+    const konami = [
+      "ArrowUp",
+      "ArrowUp",
+      "ArrowDown",
+      "ArrowDown",
+      "ArrowLeft",
+      "ArrowRight",
+      "ArrowLeft",
+      "ArrowRight",
+      "B",
+      "A",
+    ];
+
     var index = 0;
+    var keyTrue = false;
+    var effet = "";
     window.addEventListener("keydown", (e) => {
-      if (e.key.toLowerCase() == secret[index]) index++;
-      else index = 0;
-      if (index == secret.length) {
+      if (
+        e.key.toLowerCase() == secret[index] ||
+        e.key.toLowerCase() == konami[index].toLowerCase()
+      ) {
+        effet += e.key;
+        index++;
+        keyTrue = true;
+      }
+      if (!keyTrue) {
+        index = 0;
+        effet = "";
+      }
+      if (effet.toLowerCase() == secret) {
         document.body.classList.toggle("secret3000");
+        effet = "";
+        index = 0;
+      } else if (effet.toLowerCase() == konami.join("").toLowerCase()) {
+        document.body.classList.add("SWAG360");
+        setTimeout(() => {
+          document.body.classList.remove("SWAG360");
+        }, 1100);
+        effet = "";
         index = 0;
       }
+      keyTrue = false;
     });
   </script>
 </html>
