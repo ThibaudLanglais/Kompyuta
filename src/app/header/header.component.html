@@ -1,81 +1,80 @@
-
 <nav class="{{ whiteClass ? 'white' : '' }} {{ menuActive ? 'active' : '' }}">
-    <div class="logo">
-      <a [routerLink]="['/']">
-        <img
+  <div class="logo">
+    <a [routerLink]="['/']">
+      <app-site-logo></app-site-logo>
+      <!-- <img
           src="../../assets/logo_{{ whiteClass ? 'white' : 'black' }}.svg"
           alt="Logo du site Kompyuta"
-        />
-        <p>コンピュータ</p>
-      </a>
-    </div>
-    <ul class="mainmenu">
-      <li><a [routerLink]="['configurateur']">Configurateur</a></li>
-      <li>
-        <a href="#"
-          >Catalogue<img src="../../assets/chevron.svg" alt="Chevron"
-        /></a>
-        <ul class="submenu">
+        /> -->
+      <p>コンピュータ</p>
+    </a>
+  </div>
+  <ul class="mainmenu">
+    <li><a [routerLink]="['configurateur']">Configurateur</a></li>
+    <li>
+      <a href="#"
+        >Catalogue<img src="../../assets/chevron.svg" alt="Chevron"
+      /></a>
+      <ul class="submenu">
+        <li>
+          <a [routerLink]="['categorie', 'fixes']">
+            <h3 class="header">Ordinateurs fixes</h3>
+            <img src="../../assets/ordi_fixes.png" alt="Ordinateurs fixes"
+          /></a>
+        </li>
+        <div>
           <li>
-            <a [routerLink]="['categorie', 'fixes']">
-              <h3 class="header">Ordinateurs fixes</h3>
-              <img src="../../assets/ordi_fixes.png" alt="Ordinateurs fixes"
+            <a [routerLink]="['categorie', 'composants']">
+              <h3 class="header">Composants</h3>
+              <img src="../../assets/composants.png" alt="Composants"
             /></a>
           </li>
-          <div>
-            <li>
-              <a [routerLink]="['categorie', 'composants']">
-                <h3 class="header">Composants</h3>
-                <img src="../../assets/composants.png" alt="Composants"
-              /></a>
-            </li>
-            <li>
-              <a [routerLink]="['categorie', 'portables']">
-                <h3 class="header">PC Portables</h3>
-                <img
-                  src="../../assets/ordi_portables.png"
-                  alt="Ordinateurs portables"
-              /></a>
-            </li>
-          </div>
-        </ul>
-      </li>
-      <li><a [routerLink]="['comparateur']">Comparateur</a></li>
-    </ul>
-    <div class="buttons">
-      <button (click)="toggleSearch()" class="btn_container">
-        <img src="../../assets/search.svg" alt="" />
-      </button>
-      <div>
-        <a class="btn_container" [routerLink]="['panier']">
-          <span *ngIf="panierItemsNumber" class="badge">{{
-            panierItemsNumber
-          }}</span>
-          <img src="../../assets/basket.svg" alt="" />
-        </a>
-      </div>
-      <div class="btn_container">
-        <img src="../../assets/account.svg" alt="" />
-      </div>
-    </div>
-    <button (click)="toggleMenu()" class="mobile-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+          <li>
+            <a [routerLink]="['categorie', 'portables']">
+              <h3 class="header">PC Portables</h3>
+              <img
+                src="../../assets/ordi_portables.png"
+                alt="Ordinateurs portables"
+            /></a>
+          </li>
+        </div>
+      </ul>
+    </li>
+    <li><a [routerLink]="['comparateur']">Comparateur</a></li>
+  </ul>
+  <div class="buttons">
+    <button (click)="toggleSearch()" class="btn_container">
+      <img src="../../assets/search.svg" alt="" />
     </button>
-    <form
-      [formGroup]="searchFormGroup"
-      (ngSubmit)="onSearchSubmit()"
-      class="search"
-      [ngClass]="{ active: searchActive }"
-    >
-      <input
-        formControlName="query"
-        placeholder="Recherchez un produit..."
-        type="text"
-        name="search_bar"
-        id="search_bar"
-      />
-    </form>
+    <div>
+      <a class="btn_container" [routerLink]="['panier']">
+        <span *ngIf="panierItemsNumber" class="badge">{{
+          panierItemsNumber
+        }}</span>
+        <img src="../../assets/basket.svg" alt="" />
+      </a>
+    </div>
+    <div class="btn_container">
+      <img src="../../assets/account.svg" alt="" />
+    </div>
+  </div>
+  <button (click)="toggleMenu()" class="mobile-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <form
+    [formGroup]="searchFormGroup"
+    (ngSubmit)="onSearchSubmit()"
+    class="search"
+    [ngClass]="{ active: searchActive }"
+  >
+    <input
+      formControlName="query"
+      placeholder="Recherchez un produit..."
+      type="text"
+      name="search_bar"
+      id="search_bar"
+    />
+  </form>
 </nav>
-

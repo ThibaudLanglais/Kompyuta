@@ -26,6 +26,7 @@ import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 import { ComparaisonComponent } from './comparaison/comparaison.component';
 import { ModaleComponent } from './modale/modale.component';
+import { SiteLogoComponent } from './site-logo/site-logo.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -49,7 +50,8 @@ registerLocaleData(localeFr);
     PageSearchComponent,
     NgLetDirective,
     ComparaisonComponent,
-    ModaleComponent
+    ModaleComponent,
+    SiteLogoComponent
   ],
   imports: [
     BrowserModule,
